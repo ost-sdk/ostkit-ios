@@ -27,13 +27,15 @@ public class UserServices {
         case asc = "asc"
     }
     
-    private var authens: [String: Any]
+    private var key: String
+    private var secret: String
     private var baseURLString: String
     private var session = Alamofire.SessionManager.default
     private var debugMode: Bool = false
     
-    init(authens: [String: Any], baseURLString: String, debugMode: Bool = false) {
-        self.authens = authens
+    init(key: String, secret: String, baseURLString: String, debugMode: Bool = false) {
+        self.key = key
+        self.secret = secret
         self.baseURLString = baseURLString
         self.debugMode = debugMode
     }
@@ -46,7 +48,8 @@ public class UserServices {
         let builder = UserBuilder(
             endpoint: .create(name: name),
             baseURLString: baseURLString,
-            authens: authens
+            key: key,
+            secret: secret
         )
         
         let request = session.request(builder)
@@ -75,7 +78,8 @@ public class UserServices {
         let builder = UserBuilder(
             endpoint: .edit(uuid: uuid, name: name),
             baseURLString: baseURLString,
-            authens: authens
+            key: key,
+            secret: secret
         )
         
         let request = session.request(builder)
@@ -113,7 +117,8 @@ public class UserServices {
         let builder = UserBuilder(
             endpoint: endPoint,
             baseURLString: baseURLString,
-            authens: authens
+            key: key,
+            secret: secret
         )
         
         let request = session.request(builder)

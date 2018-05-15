@@ -75,6 +75,42 @@
 			name = frameworks;
 			sourceTree = "<group>";
 		};
+		371C577820AB56ED008D72B9 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				371C577C20AB5746008D72B9 /* Builders */,
+				371C577B20AB5746008D72B9 /* Helpers */,
+				371C577A20AB5746008D72B9 /* Services */,
+				37DF7A9F20AAA170007C7712 /* OSTSDK.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		371C577A20AB5746008D72B9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				37DF7AA120AAA23A007C7712 /* UserServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		371C577B20AB5746008D72B9 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				37548E5E20A9F55C00D665B4 /* Helpers.swift */,
+				371C577520AB4E84008D72B9 /* CustomResponse.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		371C577C20AB5746008D72B9 /* Builders */ = {
+			isa = PBXGroup;
+			children = (
+				37DF7A9B20AAA0A9007C7712 /* UserBuilder.swift */,
+			);
+			path = Builders;
+			sourceTree = "<group>";
+		};
 		37548E3620A989B400D665B4 = {
 			isa = PBXGroup;
 			children = (
@@ -96,8 +132,8 @@
 		37548E4220A989B400D665B4 /* ostkit */ = {
 			isa = PBXGroup;
 			children = (
+				371C577820AB56ED008D72B9 /* Sources */,
 				371C576F20AB381D008D72B9 /* frameworks */,
-				37548E5C20A9F4D300D665B4 /* Sources */,
 				37548E4320A989B400D665B4 /* ostkit.h */,
 				37548E4420A989B400D665B4 /* Info.plist */,
 			);
@@ -111,18 +147,6 @@
 				37548E5020A989B400D665B4 /* Info.plist */,
 			);
 			path = ostkitTests;
-			sourceTree = "<group>";
-		};
-		37548E5C20A9F4D300D665B4 /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				37DF7AA120AAA23A007C7712 /* UserServices.swift */,
-				37DF7A9F20AAA170007C7712 /* OSTSDK.swift */,
-				37548E5E20A9F55C00D665B4 /* Helpers.swift */,
-				37DF7A9B20AAA0A9007C7712 /* UserBuilder.swift */,
-				371C577520AB4E84008D72B9 /* CustomResponse.swift */,
-			);
-			name = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

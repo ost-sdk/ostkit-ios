@@ -47,30 +47,14 @@ internal struct UserBuilder: URLRequestConvertible {
     
     internal var endpoint: UserEndPoint
     internal var baseURLString: String
-    internal var authens: [String: Any]
+    internal var key: String
+    internal var secret: String
     
-    internal init(endpoint: UserEndPoint, baseURLString: String, authens: [String: Any]) {
+    internal init(endpoint: UserEndPoint, baseURLString: String, key: String, secret: String) {
         self.endpoint = endpoint
         self.baseURLString = baseURLString
-        self.authens = authens
-    }
-    
-    private func addSignature(params: [String: Any]) -> [String: Any] {
-        var _params = params
-        let timeStamp = Date().timeIntervalSince1970
-        let path = endpoint.path
-        let key = authens["api_key"] as! String
-        let queryString = generateQueryString(
-            endpoint: path, params: params,
-            apiKey: key, requestTimestamp: timeStamp
-        )
-        let secret = authens["api_secret"] as! String
-        if let signature = try? generateApiSignature(stringToSign: queryString, apiSecret: secret) {
-            _params["signature"] = signature
-        }
-        _params["request_timestamp"] = String(format: "%.0f", timeStamp)
-        _params["api_key"] = key
-        return _params
+        self.key = key
+        self.secret = secret
     }
     
     private func createRequestParams() -> [String: Any] {
@@ -98,7 +82,10 @@ internal struct UserBuilder: URLRequestConvertible {
             }
         }
         
-        return addSignature(params: params)
+        return addSignature(
+            params: params, path: endpoint.path,
+            key: key, secret: secret
+        )
     }
     
     public func asURLRequest() throws -> URLRequest {

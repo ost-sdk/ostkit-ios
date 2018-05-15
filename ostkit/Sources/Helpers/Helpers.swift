@@ -29,6 +29,26 @@ internal func generateApiSignature(
     return (try hmac.authenticate(stringToSign.bytes)).toHexString()
 }
 
+internal func addSignature(
+    params: [String: Any], path: String,
+    key: String, secret: String
+    ) -> [String: Any] {
+    
+    var _params = params
+    let timeStamp = Date().timeIntervalSince1970
+    let queryString = generateQueryString(
+        endpoint: path, params: params,
+        apiKey: key, requestTimestamp: timeStamp
+    )
+    
+    if let signature = try? generateApiSignature(stringToSign: queryString, apiSecret: secret) {
+        _params["signature"] = signature
+    }
+    _params["request_timestamp"] = String(format: "%.0f", timeStamp)
+    _params["api_key"] = key
+    return _params
+}
+
 public enum ServiceResult<Value> {
     case success(Value)
     case failure(Error)

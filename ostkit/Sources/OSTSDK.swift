@@ -24,13 +24,11 @@ public class OSTSDK {
     }
     
     public func userServices() -> UserServices {
-        let authens = [
-            "api_key": key,
-            "api_secret": secret
-        ]
+        
         
         let services = UserServices(
-            authens: authens,
+            key: key,
+            secret: secret,
             baseURLString: baseURLString,
             debugMode: debugMode
         )
