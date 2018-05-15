@@ -12,19 +12,43 @@
 		37DF7ACB20AACB91007C7712 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37DF7AC920AACB91007C7712 /* Main.storyboard */; };
 		37DF7ACD20AACB91007C7712 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37DF7ACC20AACB91007C7712 /* Assets.xcassets */; };
 		37DF7AD020AACB91007C7712 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37DF7ACE20AACB91007C7712 /* LaunchScreen.storyboard */; };
-		37DF7AD820AACBD9007C7712 /* ostkit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37DF7AD720AACBD9007C7712 /* ostkit.framework */; };
-		37DF7AD920AACBD9007C7712 /* ostkit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37DF7AD720AACBD9007C7712 /* ostkit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		37DF7ADC20AACC24007C7712 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF7ADB20AACC24007C7712 /* constants.swift */; };
+		37DF7AF920AB2B92007C7712 /* ostkit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37DF7AE320AB2355007C7712 /* ostkit.framework */; };
+		37DF7AFA20AB2B92007C7712 /* ostkit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37DF7AE320AB2355007C7712 /* ostkit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		37DF7AE220AB2355007C7712 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37DF7ADD20AB2355007C7712 /* ostkit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 37548E4020A989B400D665B4;
+			remoteInfo = ostkit;
+		};
+		37DF7AE420AB2355007C7712 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37DF7ADD20AB2355007C7712 /* ostkit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 37548E4920A989B400D665B4;
+			remoteInfo = ostkitTests;
+		};
+		37DF7AFB20AB2B92007C7712 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37DF7ADD20AB2355007C7712 /* ostkit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 37548E3F20A989B400D665B4;
+			remoteInfo = ostkit;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
-		37DF7ADA20AACBD9007C7712 /* Embed Frameworks */ = {
+		37DF7AFD20AB2B92007C7712 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				37DF7AD920AACBD9007C7712 /* ostkit.framework in Embed Frameworks */,
+				37DF7AFA20AB2B92007C7712 /* ostkit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -39,8 +63,8 @@
 		37DF7ACC20AACB91007C7712 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37DF7ACF20AACB91007C7712 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		37DF7AD120AACB91007C7712 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		37DF7AD720AACBD9007C7712 /* ostkit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ostkit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37DF7ADB20AACC24007C7712 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
+		37DF7ADD20AB2355007C7712 /* ostkit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ostkit.xcodeproj; path = ../ostkit.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37DF7AD820AACBD9007C7712 /* ostkit.framework in Frameworks */,
+				37DF7AF920AB2B92007C7712 /* ostkit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,7 +82,7 @@
 		37DF7AB920AACB91007C7712 = {
 			isa = PBXGroup;
 			children = (
-				37DF7AD720AACBD9007C7712 /* ostkit.framework */,
+				37DF7ADD20AB2355007C7712 /* ostkit.xcodeproj */,
 				37DF7AC420AACB91007C7712 /* iOS Example */,
 				37DF7AC320AACB91007C7712 /* Products */,
 			);
@@ -86,6 +110,15 @@
 			path = "iOS Example";
 			sourceTree = "<group>";
 		};
+		37DF7ADE20AB2355007C7712 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				37DF7AE320AB2355007C7712 /* ostkit.framework */,
+				37DF7AE520AB2355007C7712 /* ostkitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -96,11 +129,12 @@
 				37DF7ABE20AACB91007C7712 /* Sources */,
 				37DF7ABF20AACB91007C7712 /* Frameworks */,
 				37DF7AC020AACB91007C7712 /* Resources */,
-				37DF7ADA20AACBD9007C7712 /* Embed Frameworks */,
+				37DF7AFD20AB2B92007C7712 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				37DF7AFC20AB2B92007C7712 /* PBXTargetDependency */,
 			);
 			name = "iOS Example";
 			productName = "iOS Example";
@@ -133,12 +167,35 @@
 			mainGroup = 37DF7AB920AACB91007C7712;
 			productRefGroup = 37DF7AC320AACB91007C7712 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 37DF7ADE20AB2355007C7712 /* Products */;
+					ProjectRef = 37DF7ADD20AB2355007C7712 /* ostkit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				37DF7AC120AACB91007C7712 /* iOS Example */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		37DF7AE320AB2355007C7712 /* ostkit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ostkit.framework;
+			remoteRef = 37DF7AE220AB2355007C7712 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		37DF7AE520AB2355007C7712 /* ostkitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ostkitTests.xctest;
+			remoteRef = 37DF7AE420AB2355007C7712 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		37DF7AC020AACB91007C7712 /* Resources */ = {
@@ -165,6 +222,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		37DF7AFC20AB2B92007C7712 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ostkit;
+			targetProxy = 37DF7AFB20AB2B92007C7712 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		37DF7AC920AACB91007C7712 /* Main.storyboard */ = {
@@ -303,9 +368,10 @@
 		37DF7AD520AACB91007C7712 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LNB9VFK4YZ;
+				DEVELOPMENT_TEAM = L8BLZZ773P;
 				INFOPLIST_FILE = "iOS Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -321,9 +387,10 @@
 		37DF7AD620AACB91007C7712 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LNB9VFK4YZ;
+				DEVELOPMENT_TEAM = L8BLZZ773P;
 				INFOPLIST_FILE = "iOS Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

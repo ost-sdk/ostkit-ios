@@ -14,8 +14,6 @@
 		37DF7A9C20AAA0A9007C7712 /* UserBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF7A9B20AAA0A9007C7712 /* UserBuilder.swift */; };
 		37DF7AA020AAA170007C7712 /* OSTSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF7A9F20AAA170007C7712 /* OSTSDK.swift */; };
 		37DF7AA220AAA23A007C7712 /* UserServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF7AA120AAA23A007C7712 /* UserServices.swift */; };
-		7A1ED95AAFC3A2AAE25B0D46 /* Pods_ostkitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6F923B58442B98EA747039 /* Pods_ostkitTests.framework */; };
-		93DDF7A49F2EB09AD8B8EAFA /* Pods_ostkit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A76D6D0B4AFC618BF66BC3A /* Pods_ostkit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +27,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1BD74EC6BE3287FA4D178417 /* Pods-ostkitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ostkitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ostkitTests/Pods-ostkitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		37548E4020A989B400D665B4 /* ostkit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ostkit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37548E4320A989B400D665B4 /* ostkit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ostkit.h; sourceTree = "<group>"; };
 		37548E4420A989B400D665B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -40,11 +37,6 @@
 		37DF7A9B20AAA0A9007C7712 /* UserBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBuilder.swift; sourceTree = "<group>"; };
 		37DF7A9F20AAA170007C7712 /* OSTSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSTSDK.swift; sourceTree = "<group>"; };
 		37DF7AA120AAA23A007C7712 /* UserServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServices.swift; sourceTree = "<group>"; };
-		49BFD40844465A81028F719A /* Pods-ostkit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ostkit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ostkit/Pods-ostkit.debug.xcconfig"; sourceTree = "<group>"; };
-		72296FEA4E1A4B3F95B6F3DE /* Pods-ostkitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ostkitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ostkitTests/Pods-ostkitTests.release.xcconfig"; sourceTree = "<group>"; };
-		7A76D6D0B4AFC618BF66BC3A /* Pods_ostkit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ostkit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA6F923B58442B98EA747039 /* Pods_ostkitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ostkitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F2024E8E39DBB4DD1D16BAC1 /* Pods-ostkit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ostkit.release.xcconfig"; path = "Pods/Target Support Files/Pods-ostkit/Pods-ostkit.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +44,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93DDF7A49F2EB09AD8B8EAFA /* Pods_ostkit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,7 +52,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				37548E4A20A989B400D665B4 /* ostkit.framework in Frameworks */,
-				7A1ED95AAFC3A2AAE25B0D46 /* Pods_ostkitTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,8 +64,6 @@
 				37548E4220A989B400D665B4 /* ostkit */,
 				37548E4D20A989B400D665B4 /* ostkitTests */,
 				37548E4120A989B400D665B4 /* Products */,
-				F56DF1A598E22DF1540C0BE8 /* Pods */,
-				BED99428C29FF458D787CE81 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -150,26 +138,6 @@
 			path = SDK;
 			sourceTree = "<group>";
 		};
-		BED99428C29FF458D787CE81 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				7A76D6D0B4AFC618BF66BC3A /* Pods_ostkit.framework */,
-				EA6F923B58442B98EA747039 /* Pods_ostkitTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		F56DF1A598E22DF1540C0BE8 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				49BFD40844465A81028F719A /* Pods-ostkit.debug.xcconfig */,
-				F2024E8E39DBB4DD1D16BAC1 /* Pods-ostkit.release.xcconfig */,
-				1BD74EC6BE3287FA4D178417 /* Pods-ostkitTests.debug.xcconfig */,
-				72296FEA4E1A4B3F95B6F3DE /* Pods-ostkitTests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -188,7 +156,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 37548E5420A989B400D665B4 /* Build configuration list for PBXNativeTarget "ostkit" */;
 			buildPhases = (
-				2FF459B9498421D414C2D6F6 /* [CP] Check Pods Manifest.lock */,
 				37548E3B20A989B400D665B4 /* Sources */,
 				37548E3C20A989B400D665B4 /* Frameworks */,
 				37548E3D20A989B400D665B4 /* Headers */,
@@ -207,11 +174,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 37548E5720A989B400D665B4 /* Build configuration list for PBXNativeTarget "ostkitTests" */;
 			buildPhases = (
-				BE02464E61697C5348BAFD6F /* [CP] Check Pods Manifest.lock */,
 				37548E4520A989B400D665B4 /* Sources */,
 				37548E4620A989B400D665B4 /* Frameworks */,
 				37548E4720A989B400D665B4 /* Resources */,
-				27C221ED0D5A5D719D6850F5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -277,65 +242,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		27C221ED0D5A5D719D6850F5 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ostkitTests/Pods-ostkitTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ostkitTests/Pods-ostkitTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2FF459B9498421D414C2D6F6 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ostkit-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BE02464E61697C5348BAFD6F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ostkitTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		37548E3B20A989B400D665B4 /* Sources */ = {
@@ -490,13 +396,12 @@
 		};
 		37548E5520A989B400D665B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 49BFD40844465A81028F719A /* Pods-ostkit.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = LNB9VFK4YZ;
+				DEVELOPMENT_TEAM = L8BLZZ773P;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -518,13 +423,12 @@
 		};
 		37548E5620A989B400D665B4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F2024E8E39DBB4DD1D16BAC1 /* Pods-ostkit.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = LNB9VFK4YZ;
+				DEVELOPMENT_TEAM = L8BLZZ773P;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -545,7 +449,6 @@
 		};
 		37548E5820A989B400D665B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1BD74EC6BE3287FA4D178417 /* Pods-ostkitTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -565,7 +468,6 @@
 		};
 		37548E5920A989B400D665B4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 72296FEA4E1A4B3F95B6F3DE /* Pods-ostkitTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
