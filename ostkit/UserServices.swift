@@ -50,18 +50,14 @@ public class UserServices {
         )
         
         let request = session.request(builder)
-        request.responseJSON {
+        request.responseCustomJSON {
             response in
             if let error = response.error {
                 completionHandler(.failure(error))
-                return
-            }
-            
-            if let json = response.value as? [String: Any] {
+            } else if let json = response.value {
                 completionHandler(.success(json))
             } else {
-                let error = ServiceError.parsing
-                completionHandler(.failure(error))
+                completionHandler(.failure(ServiceError.parsing))
             }
         }
         
@@ -83,18 +79,14 @@ public class UserServices {
         )
         
         let request = session.request(builder)
-        request.responseJSON {
+        request.responseCustomJSON {
             response in
             if let error = response.error {
                 completionHandler(.failure(error))
-                return
-            }
-            
-            if let json = response.value as? [String: Any] {
+            } else if let json = response.value {
                 completionHandler(.success(json))
             } else {
-                let error = ServiceError.parsing
-                completionHandler(.failure(error))
+                completionHandler(.failure(ServiceError.parsing))
             }
         }
         
@@ -125,18 +117,14 @@ public class UserServices {
         )
         
         let request = session.request(builder)
-        request.responseJSON {
+        request.responseCustomJSON {
             response in
             if let error = response.error {
                 completionHandler(.failure(error))
-                return
-            }
-            
-            if let json = response.value as? [String: Any] {
+            } else if let json = response.value {
                 completionHandler(.success(json))
             } else {
-                let error = ServiceError.parsing
-                completionHandler(.failure(error))
+                completionHandler(.failure(ServiceError.parsing))
             }
         }
         

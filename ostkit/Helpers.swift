@@ -34,6 +34,19 @@ public enum ServiceResult<Value> {
     case failure(Error)
 }
 
+public struct OSTErrorInfo {
+    public var code: String
+    public var msg: String
+    public var data: [String: Any]
+    
+    init(dict: [String: Any]) {
+        code = dict["code"] as? String ?? ""
+        msg = dict["msg"] as? String ?? ""
+        data = dict["error_data"] as? [String: Any] ?? [:]
+    }
+}
+
 public enum ServiceError: Error {
     case parsing
+    case ost(OSTErrorInfo)
 }
