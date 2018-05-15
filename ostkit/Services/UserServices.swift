@@ -30,10 +30,12 @@ public class UserServices {
     private var authens: [String: Any]
     private var baseURLString: String
     private var session = Alamofire.SessionManager.default
+    private var debugMode: Bool = false
     
-    init(authens: [String: Any], baseURLString: String) {
+    init(authens: [String: Any], baseURLString: String, debugMode: Bool = false) {
         self.authens = authens
         self.baseURLString = baseURLString
+        self.debugMode = debugMode
     }
     
     @discardableResult
@@ -61,6 +63,10 @@ public class UserServices {
                 let error = ServiceError.parsing
                 completionHandler(.failure(error))
             }
+        }
+        
+        if debugMode {
+            debugPrint(request)
         }
         return request
     }
@@ -90,6 +96,10 @@ public class UserServices {
                 let error = ServiceError.parsing
                 completionHandler(.failure(error))
             }
+        }
+        
+        if debugMode {
+            debugPrint(request)
         }
         return request
     }
@@ -128,6 +138,10 @@ public class UserServices {
                 let error = ServiceError.parsing
                 completionHandler(.failure(error))
             }
+        }
+        
+        if debugMode {
+            debugPrint(request)
         }
         return request
     }

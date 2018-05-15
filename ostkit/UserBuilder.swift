@@ -57,19 +57,18 @@ internal struct UserBuilder: URLRequestConvertible {
     
     private func addSignature(params: [String: Any]) -> [String: Any] {
         var _params = params
-        let timeStamp = Date().timeIntervalSince1970 / 1000
+        let timeStamp = Date().timeIntervalSince1970
         let path = endpoint.path
         let key = authens["api_key"] as! String
         let queryString = generateQueryString(
             endpoint: path, params: params,
             apiKey: key, requestTimestamp: timeStamp
         )
-        
         let secret = authens["api_secret"] as! String
         if let signature = try? generateApiSignature(stringToSign: queryString, apiSecret: secret) {
             _params["signature"] = signature
         }
-        _params["request_timestamp"] = timeStamp
+        _params["request_timestamp"] = String(format: "%.0f", timeStamp)
         _params["api_key"] = key
         return _params
     }

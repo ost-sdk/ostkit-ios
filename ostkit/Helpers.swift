@@ -14,7 +14,7 @@ internal func generateQueryString(
     apiKey: String, requestTimestamp: TimeInterval) -> String {
     var _params = params
     _params["api_key"] = apiKey
-    _params["request_timestamp"] = requestTimestamp
+    _params["request_timestamp"] = String(format: "%.0f", requestTimestamp)
     let queryString = _params.sorted(by: {$0.key < $1.key})
         .map({(key: $0.key, value: "\($0.value)".lowercased())})
         .map({(key: $0.key, value: $0.value.replacingOccurrences(of: " ", with: "+"))})
@@ -25,8 +25,8 @@ internal func generateQueryString(
 
 internal func generateApiSignature(
     stringToSign: String, apiSecret: String) throws -> String {
-    let hmac = try HMAC(key: stringToSign, variant: .sha256)
-    return (try hmac.authenticate(apiSecret.bytes)).toHexString()
+    let hmac = try HMAC(key: apiSecret, variant: .sha256)
+    return (try hmac.authenticate(stringToSign.bytes)).toHexString()
 }
 
 public enum ServiceResult<Value> {

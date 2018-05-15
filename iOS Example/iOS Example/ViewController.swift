@@ -8,6 +8,7 @@
 
 import UIKit
 import ostkit
+import Alamofire
 
 class ViewController: UIViewController {
 
@@ -15,9 +16,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         
-        let sdk = OSTSDK(baseURLString: BASE_URL_STRING, key: API_KEY, serect: API_SECRET)
+        let sdk = OSTSDK(baseURLString: BASE_URL_STRING, key: API_KEY, serect: API_SECRET, debugMode: true)
         let userService = sdk.userServices()
-        userService.create(name: "duong") {
+        userService.list(filter: .all, orderBy: .creationTime, order: .desc) {
             response in
             debugPrint(response)
         }

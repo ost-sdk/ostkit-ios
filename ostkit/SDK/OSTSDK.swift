@@ -14,11 +14,13 @@ public class OSTSDK {
     private var baseURLString: String
     private var key: String
     private var secret: String
+    public var debugMode: Bool = false
     
-    public init(baseURLString: String, key: String, serect: String) {
+    public init(baseURLString: String, key: String, serect: String, debugMode: Bool = false) {
         self.baseURLString = baseURLString
         self.key = key
         self.secret = serect
+        self.debugMode = debugMode
     }
     
     public func userServices() -> UserServices {
@@ -29,7 +31,8 @@ public class OSTSDK {
         
         let services = UserServices(
             authens: authens,
-            baseURLString: baseURLString
+            baseURLString: baseURLString,
+            debugMode: debugMode
         )
         return services
     }
