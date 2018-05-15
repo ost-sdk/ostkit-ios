@@ -8,6 +8,7 @@
 
 import Foundation
 import CryptoSwift
+import Alamofire
 
 internal func generateQueryString(
     endpoint: String, params: [String: Any],
@@ -47,6 +48,30 @@ internal func addSignature(
     _params["request_timestamp"] = String(format: "%.0f", timeStamp)
     _params["api_key"] = key
     return _params
+}
+
+internal func createRequest(
+    builder: URLRequestConvertible, session: Alamofire.SessionManager,
+    debugMode: Bool,
+    completionHandler: @escaping (ServiceResult<[String: Any]>) -> Void
+    ) -> Request? {
+    
+    let request = session.request(builder)
+    request.responseCustomJSON {
+        response in
+        if let error = response.error {
+            completionHandler(.failure(error))
+        } else if let json = response.value {
+            completionHandler(.success(json))
+        } else {
+            completionHandler(.failure(ServiceError.parsing))
+        }
+    }
+    
+    if debugMode {
+        debugPrint(request)
+    }
+    return request
 }
 
 public enum ServiceResult<Value> {

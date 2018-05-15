@@ -10,6 +10,7 @@
 		371C577220AB3834008D72B9 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 371C577020AB3834008D72B9 /* Alamofire.framework */; };
 		371C577320AB3834008D72B9 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 371C577120AB3834008D72B9 /* CryptoSwift.framework */; };
 		371C577620AB4E84008D72B9 /* CustomResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371C577520AB4E84008D72B9 /* CustomResponse.swift */; };
+		375380E120AB59A6005279D8 /* AirDropBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375380E020AB59A6005279D8 /* AirDropBuilder.swift */; };
 		37548E4A20A989B400D665B4 /* ostkit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37548E4020A989B400D665B4 /* ostkit.framework */; };
 		37548E4F20A989B400D665B4 /* ostkitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37548E4E20A989B400D665B4 /* ostkitTests.swift */; };
 		37548E5120A989B400D665B4 /* ostkit.h in Headers */ = {isa = PBXBuildFile; fileRef = 37548E4320A989B400D665B4 /* ostkit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -33,6 +34,7 @@
 		371C577020AB3834008D72B9 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = SOURCE_ROOT; };
 		371C577120AB3834008D72B9 /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = Carthage/Build/iOS/CryptoSwift.framework; sourceTree = SOURCE_ROOT; };
 		371C577520AB4E84008D72B9 /* CustomResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomResponse.swift; sourceTree = "<group>"; };
+		375380E020AB59A6005279D8 /* AirDropBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirDropBuilder.swift; sourceTree = "<group>"; };
 		37548E4020A989B400D665B4 /* ostkit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ostkit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37548E4320A989B400D665B4 /* ostkit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ostkit.h; sourceTree = "<group>"; };
 		37548E4420A989B400D665B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				37DF7A9B20AAA0A9007C7712 /* UserBuilder.swift */,
+				375380E020AB59A6005279D8 /* AirDropBuilder.swift */,
 			);
 			path = Builders;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				37DF7AA220AAA23A007C7712 /* UserServices.swift in Sources */,
 				371C577620AB4E84008D72B9 /* CustomResponse.swift in Sources */,
 				37DF7A9C20AAA0A9007C7712 /* UserBuilder.swift in Sources */,
+				375380E120AB59A6005279D8 /* AirDropBuilder.swift in Sources */,
 				37548E5F20A9F55C00D665B4 /* Helpers.swift in Sources */,
 				37DF7AA020AAA170007C7712 /* OSTSDK.swift in Sources */,
 			);

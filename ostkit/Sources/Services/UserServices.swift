@@ -51,23 +51,10 @@ public class UserServices {
             key: key,
             secret: secret
         )
-        
-        let request = session.request(builder)
-        request.responseCustomJSON {
-            response in
-            if let error = response.error {
-                completionHandler(.failure(error))
-            } else if let json = response.value {
-                completionHandler(.success(json))
-            } else {
-                completionHandler(.failure(ServiceError.parsing))
-            }
-        }
-        
-        if debugMode {
-            debugPrint(request)
-        }
-        return request
+        return createRequest(
+            builder: builder, session: session,
+            debugMode: debugMode, completionHandler: completionHandler
+        )
     }
     
     @discardableResult
@@ -81,23 +68,10 @@ public class UserServices {
             key: key,
             secret: secret
         )
-        
-        let request = session.request(builder)
-        request.responseCustomJSON {
-            response in
-            if let error = response.error {
-                completionHandler(.failure(error))
-            } else if let json = response.value {
-                completionHandler(.success(json))
-            } else {
-                completionHandler(.failure(ServiceError.parsing))
-            }
-        }
-        
-        if debugMode {
-            debugPrint(request)
-        }
-        return request
+        return createRequest(
+            builder: builder, session: session,
+            debugMode: debugMode, completionHandler: completionHandler
+        )
     }
     
     @discardableResult
@@ -121,21 +95,54 @@ public class UserServices {
             secret: secret
         )
         
-        let request = session.request(builder)
-        request.responseCustomJSON {
-            response in
-            if let error = response.error {
-                completionHandler(.failure(error))
-            } else if let json = response.value {
-                completionHandler(.success(json))
-            } else {
-                completionHandler(.failure(ServiceError.parsing))
-            }
-        }
+        return createRequest(
+            builder: builder, session: session,
+            debugMode: debugMode, completionHandler: completionHandler
+        )
+    }
+    
+    @discardableResult
+    public func airdropDrop(
+        amount: Float,
+        listType: Filter = .all,
+        completionHandler: @escaping (ServiceResult<[String: Any]>) -> Void
+        ) -> Request? {
         
-        if debugMode {
-            debugPrint(request)
-        }
-        return request
+        let endPoint = AirdropEndPoint.drop(
+            amount: amount, listType: listType.rawValue
+        )
+        
+        let builder = AirdropBuilder(
+            endpoint: endPoint,
+            baseURLString: baseURLString,
+            key: key,
+            secret: secret
+        )
+        
+        return createRequest(
+            builder: builder, session: session,
+            debugMode: debugMode, completionHandler: completionHandler
+        )
+    }
+    
+    @discardableResult
+    public func airdropStatus(
+        uuid: String,
+        completionHandler: @escaping (ServiceResult<[String: Any]>) -> Void
+        ) -> Request? {
+        
+        let endPoint = AirdropEndPoint.status(uuid: uuid)
+        
+        let builder = AirdropBuilder(
+            endpoint: endPoint,
+            baseURLString: baseURLString,
+            key: key,
+            secret: secret
+        )
+        
+        return createRequest(
+            builder: builder, session: session,
+            debugMode: debugMode, completionHandler: completionHandler
+        )
     }
 }
