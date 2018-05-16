@@ -12,7 +12,6 @@
 		37DF7ACB20AACB91007C7712 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37DF7AC920AACB91007C7712 /* Main.storyboard */; };
 		37DF7ACD20AACB91007C7712 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37DF7ACC20AACB91007C7712 /* Assets.xcassets */; };
 		37DF7AD020AACB91007C7712 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37DF7ACE20AACB91007C7712 /* LaunchScreen.storyboard */; };
-		37DF7ADC20AACC24007C7712 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF7ADB20AACC24007C7712 /* constants.swift */; };
 		37DF7AF920AB2B92007C7712 /* ostkit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37DF7AE320AB2355007C7712 /* ostkit.framework */; };
 		37DF7AFA20AB2B92007C7712 /* ostkit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37DF7AE320AB2355007C7712 /* ostkit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -63,7 +62,6 @@
 		37DF7ACC20AACB91007C7712 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37DF7ACF20AACB91007C7712 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		37DF7AD120AACB91007C7712 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		37DF7ADB20AACC24007C7712 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
 		37DF7ADD20AB2355007C7712 /* ostkit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ostkit.xcodeproj; path = ../ostkit.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,7 +99,6 @@
 			children = (
 				37DF7AC520AACB91007C7712 /* AppDelegate.swift */,
 				37DF7AC720AACB91007C7712 /* ViewController.swift */,
-				37DF7ADB20AACC24007C7712 /* constants.swift */,
 				37DF7AC920AACB91007C7712 /* Main.storyboard */,
 				37DF7ACC20AACB91007C7712 /* Assets.xcassets */,
 				37DF7ACE20AACB91007C7712 /* LaunchScreen.storyboard */,
@@ -217,7 +214,6 @@
 			files = (
 				37DF7AC820AACB91007C7712 /* ViewController.swift in Sources */,
 				37DF7AC620AACB91007C7712 /* AppDelegate.swift in Sources */,
-				37DF7ADC20AACC24007C7712 /* constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
