@@ -43,6 +43,12 @@ public class Services {
     internal var debugMode: Bool = false
     
     /// Create service instance
+    ///
+    /// - parameter endpoint: provide request's info like method, path, input parameters
+    /// - parameter baseURLString: base url string
+    /// - parameter key: the api key as provided from OST
+    /// - parameter sectect: the api recret as provided from OST
+    /// - parameter debugMode: print request's infomation if true, no otherwise
     init(key: String, secret: String, baseURLString: String, debugMode: Bool = false) {
         self.key = key
         self.secret = secret
@@ -51,6 +57,12 @@ public class Services {
     }
     
     /// Build service's request
+    ///
+    /// - parameter endPoint: request info
+    /// - parameter session: Responsible for creating and managing `Request` objects,
+    /// as well as their underlying `NSURLSession`.
+    /// - parameter debugMode: print request's infomation if true, no otherwise
+    /// - parameter completionHandler: result handler
     internal func createRequest(
         endPoint: EndPoint,
         session: Alamofire.SessionManager,
