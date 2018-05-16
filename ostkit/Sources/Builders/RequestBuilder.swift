@@ -100,6 +100,7 @@ internal struct RequestBuilder: URLRequestConvertible {
         return _params
     }
     
+    /// URLRequestConvertible confirmation
     public func asURLRequest() throws -> URLRequest {
         let url = try baseURLString.asURL()
         
