@@ -9,8 +9,7 @@
 import Foundation
 import Alamofire
 
-
-public class UserServices {
+public class UserServices: Services {
     
     public enum Filter: String {
         case all = "all"
@@ -27,32 +26,13 @@ public class UserServices {
         case asc = "asc"
     }
     
-    private var key: String
-    private var secret: String
-    private var baseURLString: String
-    private var session = Alamofire.SessionManager.default
-    private var debugMode: Bool = false
-    
-    init(key: String, secret: String, baseURLString: String, debugMode: Bool = false) {
-        self.key = key
-        self.secret = secret
-        self.baseURLString = baseURLString
-        self.debugMode = debugMode
-    }
-    
     @discardableResult
     public func create(
         name: String,
         completionHandler: @escaping (ServiceResult<[String: Any]>) -> Void
         ) -> Request? {
-        let builder = UserBuilder(
-            endpoint: .create(name: name),
-            baseURLString: baseURLString,
-            key: key,
-            secret: secret
-        )
         return createRequest(
-            builder: builder, session: session,
+            endPoint: UserEndPoint.create(name: name), session: session,
             debugMode: debugMode, completionHandler: completionHandler
         )
     }
@@ -62,14 +42,9 @@ public class UserServices {
         uuid: String, name: String,
         completionHandler: @escaping (ServiceResult<[String: Any]>) -> Void
         ) -> Request? {
-        let builder = UserBuilder(
-            endpoint: .edit(uuid: uuid, name: name),
-            baseURLString: baseURLString,
-            key: key,
-            secret: secret
-        )
         return createRequest(
-            builder: builder, session: session,
+            endPoint: UserEndPoint.edit(uuid: uuid, name: name),
+            session: session,
             debugMode: debugMode, completionHandler: completionHandler
         )
     }
@@ -88,15 +63,8 @@ public class UserServices {
             orderBy: orderBy?.rawValue, order: order?.rawValue
         )
         
-        let builder = UserBuilder(
-            endpoint: endPoint,
-            baseURLString: baseURLString,
-            key: key,
-            secret: secret
-        )
-        
         return createRequest(
-            builder: builder, session: session,
+            endPoint: endPoint, session: session,
             debugMode: debugMode, completionHandler: completionHandler
         )
     }
@@ -112,15 +80,8 @@ public class UserServices {
             amount: amount, listType: listType.rawValue
         )
         
-        let builder = AirdropBuilder(
-            endpoint: endPoint,
-            baseURLString: baseURLString,
-            key: key,
-            secret: secret
-        )
-        
         return createRequest(
-            builder: builder, session: session,
+            endPoint: endPoint, session: session,
             debugMode: debugMode, completionHandler: completionHandler
         )
     }
@@ -133,15 +94,8 @@ public class UserServices {
         
         let endPoint = AirdropEndPoint.status(uuid: uuid)
         
-        let builder = AirdropBuilder(
-            endpoint: endPoint,
-            baseURLString: baseURLString,
-            key: key,
-            secret: secret
-        )
-        
         return createRequest(
-            builder: builder, session: session,
+            endPoint: endPoint, session: session,
             debugMode: debugMode, completionHandler: completionHandler
         )
     }

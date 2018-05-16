@@ -10,14 +10,19 @@
 		371C577220AB3834008D72B9 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 371C577020AB3834008D72B9 /* Alamofire.framework */; };
 		371C577320AB3834008D72B9 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 371C577120AB3834008D72B9 /* CryptoSwift.framework */; };
 		371C577620AB4E84008D72B9 /* CustomResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371C577520AB4E84008D72B9 /* CustomResponse.swift */; };
-		375380E120AB59A6005279D8 /* AirDropBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375380E020AB59A6005279D8 /* AirDropBuilder.swift */; };
+		375380E120AB59A6005279D8 /* AirDropEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375380E020AB59A6005279D8 /* AirDropEndPoint.swift */; };
 		37548E4A20A989B400D665B4 /* ostkit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37548E4020A989B400D665B4 /* ostkit.framework */; };
 		37548E4F20A989B400D665B4 /* ostkitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37548E4E20A989B400D665B4 /* ostkitTests.swift */; };
 		37548E5120A989B400D665B4 /* ostkit.h in Headers */ = {isa = PBXBuildFile; fileRef = 37548E4320A989B400D665B4 /* ostkit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		37548E5F20A9F55C00D665B4 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37548E5E20A9F55C00D665B4 /* Helpers.swift */; };
-		37DF7A9C20AAA0A9007C7712 /* UserBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF7A9B20AAA0A9007C7712 /* UserBuilder.swift */; };
+		37DF7A9C20AAA0A9007C7712 /* UserEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF7A9B20AAA0A9007C7712 /* UserEndPoint.swift */; };
 		37DF7AA020AAA170007C7712 /* OSTSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF7A9F20AAA170007C7712 /* OSTSDK.swift */; };
 		37DF7AA220AAA23A007C7712 /* UserServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF7AA120AAA23A007C7712 /* UserServices.swift */; };
+		37F6D97D20ABE5F700C384D8 /* TransactionTypeEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F6D97C20ABE5F700C384D8 /* TransactionTypeEndPoint.swift */; };
+		37F6D97F20ABEB1800C384D8 /* TransactionTypeServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F6D97E20ABEB1800C384D8 /* TransactionTypeServices.swift */; };
+		37F6D98120ABED4500C384D8 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F6D98020ABED4500C384D8 /* Services.swift */; };
+		37F6D98420ABEF6E00C384D8 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F6D98320ABEF6E00C384D8 /* EndPoint.swift */; };
+		37F6D98620ABF15300C384D8 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F6D98520ABF15300C384D8 /* RequestBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +39,7 @@
 		371C577020AB3834008D72B9 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = SOURCE_ROOT; };
 		371C577120AB3834008D72B9 /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = Carthage/Build/iOS/CryptoSwift.framework; sourceTree = SOURCE_ROOT; };
 		371C577520AB4E84008D72B9 /* CustomResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomResponse.swift; sourceTree = "<group>"; };
-		375380E020AB59A6005279D8 /* AirDropBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirDropBuilder.swift; sourceTree = "<group>"; };
+		375380E020AB59A6005279D8 /* AirDropEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirDropEndPoint.swift; sourceTree = "<group>"; };
 		37548E4020A989B400D665B4 /* ostkit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ostkit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37548E4320A989B400D665B4 /* ostkit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ostkit.h; sourceTree = "<group>"; };
 		37548E4420A989B400D665B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -42,9 +47,14 @@
 		37548E4E20A989B400D665B4 /* ostkitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ostkitTests.swift; sourceTree = "<group>"; };
 		37548E5020A989B400D665B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37548E5E20A9F55C00D665B4 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
-		37DF7A9B20AAA0A9007C7712 /* UserBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBuilder.swift; sourceTree = "<group>"; };
+		37DF7A9B20AAA0A9007C7712 /* UserEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEndPoint.swift; sourceTree = "<group>"; };
 		37DF7A9F20AAA170007C7712 /* OSTSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSTSDK.swift; sourceTree = "<group>"; };
 		37DF7AA120AAA23A007C7712 /* UserServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServices.swift; sourceTree = "<group>"; };
+		37F6D97C20ABE5F700C384D8 /* TransactionTypeEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTypeEndPoint.swift; sourceTree = "<group>"; };
+		37F6D97E20ABEB1800C384D8 /* TransactionTypeServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTypeServices.swift; sourceTree = "<group>"; };
+		37F6D98020ABED4500C384D8 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		37F6D98320ABEF6E00C384D8 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
+		37F6D98520ABF15300C384D8 /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +90,7 @@
 		371C577820AB56ED008D72B9 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				37F6D98220ABEF6400C384D8 /* EndPoints */,
 				371C577C20AB5746008D72B9 /* Builders */,
 				371C577B20AB5746008D72B9 /* Helpers */,
 				371C577A20AB5746008D72B9 /* Services */,
@@ -91,7 +102,9 @@
 		371C577A20AB5746008D72B9 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				37F6D98020ABED4500C384D8 /* Services.swift */,
 				37DF7AA120AAA23A007C7712 /* UserServices.swift */,
+				37F6D97E20ABEB1800C384D8 /* TransactionTypeServices.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -108,8 +121,10 @@
 		371C577C20AB5746008D72B9 /* Builders */ = {
 			isa = PBXGroup;
 			children = (
-				37DF7A9B20AAA0A9007C7712 /* UserBuilder.swift */,
-				375380E020AB59A6005279D8 /* AirDropBuilder.swift */,
+				37F6D98520ABF15300C384D8 /* RequestBuilder.swift */,
+				37DF7A9B20AAA0A9007C7712 /* UserEndPoint.swift */,
+				375380E020AB59A6005279D8 /* AirDropEndPoint.swift */,
+				37F6D97C20ABE5F700C384D8 /* TransactionTypeEndPoint.swift */,
 			);
 			path = Builders;
 			sourceTree = "<group>";
@@ -150,6 +165,14 @@
 				37548E5020A989B400D665B4 /* Info.plist */,
 			);
 			path = ostkitTests;
+			sourceTree = "<group>";
+		};
+		37F6D98220ABEF6400C384D8 /* EndPoints */ = {
+			isa = PBXGroup;
+			children = (
+				37F6D98320ABEF6E00C384D8 /* EndPoint.swift */,
+			);
+			path = EndPoints;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,10 +305,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				37DF7AA220AAA23A007C7712 /* UserServices.swift in Sources */,
+				37F6D97D20ABE5F700C384D8 /* TransactionTypeEndPoint.swift in Sources */,
+				37F6D98420ABEF6E00C384D8 /* EndPoint.swift in Sources */,
 				371C577620AB4E84008D72B9 /* CustomResponse.swift in Sources */,
-				37DF7A9C20AAA0A9007C7712 /* UserBuilder.swift in Sources */,
-				375380E120AB59A6005279D8 /* AirDropBuilder.swift in Sources */,
+				37DF7A9C20AAA0A9007C7712 /* UserEndPoint.swift in Sources */,
+				37F6D97F20ABEB1800C384D8 /* TransactionTypeServices.swift in Sources */,
+				375380E120AB59A6005279D8 /* AirDropEndPoint.swift in Sources */,
+				37F6D98620ABF15300C384D8 /* RequestBuilder.swift in Sources */,
 				37548E5F20A9F55C00D665B4 /* Helpers.swift in Sources */,
+				37F6D98120ABED4500C384D8 /* Services.swift in Sources */,
 				37DF7AA020AAA170007C7712 /* OSTSDK.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

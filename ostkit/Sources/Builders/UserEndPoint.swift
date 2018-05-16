@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-internal enum UserEndPoint {
+internal enum UserEndPoint: EndPoint {
     
     /// create user with name
     case create(name: String)
@@ -41,25 +41,10 @@ internal enum UserEndPoint {
             return "/users/list"
         }
     }
-}
-
-internal struct UserBuilder: URLRequestConvertible {
     
-    internal var endpoint: UserEndPoint
-    internal var baseURLString: String
-    internal var key: String
-    internal var secret: String
-    
-    internal init(endpoint: UserEndPoint, baseURLString: String, key: String, secret: String) {
-        self.endpoint = endpoint
-        self.baseURLString = baseURLString
-        self.key = key
-        self.secret = secret
-    }
-    
-    private func createRequestParams() -> [String: Any] {
+    var params: [String: Any] {
         var params: [String: Any] = [:]
-        switch endpoint {
+        switch self {
         case .create(let name):
             params["name"] = name
             
@@ -82,28 +67,6 @@ internal struct UserBuilder: URLRequestConvertible {
             }
         }
         
-        return addSignature(
-            params: params, path: endpoint.path,
-            key: key, secret: secret
-        )
-    }
-    
-    public func asURLRequest() throws -> URLRequest {
-        
-        let url = try baseURLString.asURL()
-        
-        var urlRequest = URLRequest(url: url.appendingPathComponent(endpoint.path))
-        urlRequest.httpMethod = endpoint.method.rawValue
-        
-        switch endpoint {
-        case .create, .edit:
-            let params = createRequestParams()
-            urlRequest = try JSONEncoding.default.encode(urlRequest, with: params)
-            
-        case .list:
-            let params = createRequestParams()
-            urlRequest = try URLEncoding.default.encode(urlRequest, with: params)
-        }
-        return urlRequest
+        return params
     }
 }
