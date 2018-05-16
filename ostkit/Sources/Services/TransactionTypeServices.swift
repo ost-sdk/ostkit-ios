@@ -76,7 +76,7 @@ public class TransactionTypeServices: Services {
     
     @discardableResult
     public func status(
-        transaction_uuids: String,
+        transaction_uuids: [String],
         completionHandler: @escaping (ServiceResult<[String: Any]>) -> Void
         ) -> Request? {
         let ep = TransactionTypeEP.status(transaction_uuids: transaction_uuids)

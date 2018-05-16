@@ -26,7 +26,7 @@ enum TransactionTypeEP: EndPoint {
     
     case execute(fromUUID: String, toUUID: String, kind: String)
     
-    case status(transaction_uuids: String)
+    case status(transaction_uuids: [String])
     
     var method: HTTPMethod {
         switch self {
@@ -76,7 +76,7 @@ enum TransactionTypeEP: EndPoint {
             params["transaction_kind"] = kind
             
         case .status(let transaction_uuids):
-            params["transaction_uuids[]"] = transaction_uuids
+            params["transaction_uuids"] = transaction_uuids
             
         default:
             break
