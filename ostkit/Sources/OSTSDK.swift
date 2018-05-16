@@ -8,14 +8,19 @@
 
 import Foundation
 
-
+/// Service factory
 public class OSTSDK {
-    
     private var baseURLString: String
     private var key: String
     private var secret: String
     public var debugMode: Bool = false
     
+    /// Create OSTSDK instance
+    ///
+    /// - parameter baseURLString: base url string
+    /// - parameter key: the api key as provided from OST
+    /// - parameter sectect: the api recret as provided from OST
+    /// - parameter debugMode: print request's infomation if true, no otherwise
     public init(baseURLString: String, key: String, serect: String, debugMode: Bool = false) {
         self.baseURLString = baseURLString
         self.key = key
@@ -23,9 +28,8 @@ public class OSTSDK {
         self.debugMode = debugMode
     }
     
+    /// Factory method to create User Services
     public func userServices() -> UserServices {
-        
-        
         let services = UserServices(
             key: key,
             secret: secret,
@@ -35,7 +39,14 @@ public class OSTSDK {
         return services
     }
     
-    public func transactionServices() {
-        
+    /// Factory method to create Transaction Type Services
+    public func transactionServices() -> TransactionTypeServices {
+        let services = TransactionTypeServices(
+            key: key,
+            secret: secret,
+            baseURLString: baseURLString,
+            debugMode: debugMode
+        )
+        return services
     }
 }

@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         
         let sdk = OSTSDK(baseURLString: BASE_URL_STRING, key: API_KEY, serect: API_SECRET, debugMode: true)
         let userService = sdk.userServices()
-        userService.list(filter: .all, orderBy: .creationTime, order: .desc) {
+        userService.create(name: "luong") {
             response in
             debugPrint(response)
         }

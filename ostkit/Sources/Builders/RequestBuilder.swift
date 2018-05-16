@@ -41,17 +41,19 @@ internal struct RequestBuilder: URLRequestConvertible {
     ///
     /// - returns: The string to sign
     private func generateQueryString(
-        path: String, params: [String: Any],
-        apiKey: String, requestTimestamp: TimeInterval) -> String {
+        path: String, params: [String: Any], apiKey: String,
+        requestTimestamp: TimeInterval, urlRequest: URLRequest) -> String {
         var _params = params
         _params["api_key"] = apiKey
         _params["request_timestamp"] = String(format: "%.0f", requestTimestamp)
-        let queryString = _params.sorted(by: {$0.key < $1.key})
-            .map({(key: $0.key, value: "\($0.value)".lowercased())})
-            .map({(key: $0.key, value: $0.value.replacingOccurrences(of: " ", with: "+"))})
-            .map({"\($0.key)=\($0.value)"})
-            .joined(separator: "&")
-        return path + "?" + queryString
+        
+        if let urlRequest = try? URLEncoding.default.encode(urlRequest, with: _params),
+            let body = urlRequest.httpBody,
+            let queryString = String(data: body, encoding: .utf8) {
+            return path + "?" + queryString
+        }
+        
+        return ""
     }
     
     /// Generate a signature.
@@ -79,14 +81,15 @@ internal struct RequestBuilder: URLRequestConvertible {
     /// - returns: Authenticated parameters
     private func addSignature(
         params: [String: Any], path: String,
-        key: String, secret: String
+        key: String, secret: String, urlRequest: URLRequest
         ) -> [String: Any] {
         
         var _params = params
         let timeStamp = Date().timeIntervalSince1970
         let queryString = generateQueryString(
             path: path, params: params,
-            apiKey: key, requestTimestamp: timeStamp
+            apiKey: key, requestTimestamp: timeStamp,
+            urlRequest: urlRequest
         )
         
         if let signature = try? generateApiSignature(stringToSign: queryString, apiSecret: secret) {
@@ -102,21 +105,14 @@ internal struct RequestBuilder: URLRequestConvertible {
         
         var urlRequest = URLRequest(url: url.appendingPathComponent(endpoint.path))
         urlRequest.httpMethod = endpoint.method.rawValue
+        
         let params = addSignature(
             params: endpoint.params, path: endpoint.path,
-            key: key, secret: secret
+            key: key, secret: secret, urlRequest: urlRequest
         )
         
-        switch endpoint.method {
-        case .post:
-            urlRequest = try JSONEncoding.default.encode(urlRequest, with: params)
-            
-        case .get:
-            urlRequest = try URLEncoding.default.encode(urlRequest, with: params)
-            
-        default:
-            break
-        }
+        urlRequest = try URLEncoding.default.encode(urlRequest, with: params)
+        
         return urlRequest
     }
 }
