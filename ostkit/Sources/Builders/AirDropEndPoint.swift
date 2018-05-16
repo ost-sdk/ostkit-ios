@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 
+/// Airdrop endpoint definitions.
 internal enum AirdropEndPoint: EndPoint {
     
     case drop(amount: Float, listType: String)

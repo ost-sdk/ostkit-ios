@@ -9,20 +9,22 @@
 import Foundation
 import Alamofire
 
-func handleErrorOccur<T>(jsonObject: Any, result: Result<Any>) -> Result<T>? {
-    guard let dict = jsonObject as? [String: Any],
-        let success = dict["success"] as? Bool,
-        let err = dict["err"] as? [String: Any],
-        success == false
-        else {
-            return nil
-    }
-    
-    let error = OSTErrorInfo(dict: err)
-    return .failure(ServiceError.ost(error))
-}
-
+/// hook into alamofire
+/// to handle when ost request's error occur
 public extension DataRequest {
+    
+    func handleErrorOccur<T>(jsonObject: Any, result: Result<Any>) -> Result<T>? {
+        guard let dict = jsonObject as? [String: Any],
+            let success = dict["success"] as? Bool,
+            let err = dict["err"] as? [String: Any],
+            success == false
+            else {
+                return nil
+        }
+        
+        let error = OSTErrorInfo(dict: err)
+        return .failure(ServiceError.ost(error))
+    }
     
     @discardableResult
     public func responseCustomJSON(
@@ -43,7 +45,7 @@ public extension DataRequest {
                 return .failure(ServiceError.parsing)
             }
             
-            if let failed: Result<[String: Any]> = handleErrorOccur(jsonObject: jsonObject, result: result) {
+            if let failed: Result<[String: Any]> = self.handleErrorOccur(jsonObject: jsonObject, result: result) {
                 return failed
             }
             

@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 
+/// Request end point definitions.
 protocol EndPoint {
     var method: HTTPMethod { get }
     var path: String { get }

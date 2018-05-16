@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 
+/// Transaction type endpoint definitions.
 enum TransactionTypeEP: EndPoint {
     
     case create(

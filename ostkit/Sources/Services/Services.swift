@@ -9,11 +9,7 @@
 import Foundation
 import Alamofire
 
-public enum ServiceResult<Value> {
-    case success(Value)
-    case failure(Error)
-}
-
+/// OST request error wrapper
 public struct OSTErrorInfo {
     public var code: String
     public var msg: String
@@ -26,6 +22,13 @@ public struct OSTErrorInfo {
     }
 }
 
+/// Service result definitions.
+public enum ServiceResult<Value> {
+    case success(Value)
+    case failure(Error)
+}
+
+/// Service error definitions.
 public enum ServiceError: Error {
     case parsing
     case ost(OSTErrorInfo)

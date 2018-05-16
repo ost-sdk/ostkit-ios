@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 
+/// User's endpoint definitions.
 internal enum UserEndPoint: EndPoint {
     
     /// create user with name
