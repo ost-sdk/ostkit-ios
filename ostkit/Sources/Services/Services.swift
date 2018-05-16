@@ -34,6 +34,7 @@ public enum ServiceError: Error {
     case ost(OSTErrorInfo)
 }
 
+/// Base services wrapper
 public class Services {
     internal var key: String
     internal var secret: String
@@ -41,6 +42,7 @@ public class Services {
     internal var session = Alamofire.SessionManager.default
     internal var debugMode: Bool = false
     
+    /// Create service instance
     init(key: String, secret: String, baseURLString: String, debugMode: Bool = false) {
         self.key = key
         self.secret = secret
@@ -48,6 +50,7 @@ public class Services {
         self.debugMode = debugMode
     }
     
+    /// Build service's request
     internal func createRequest(
         endPoint: EndPoint,
         session: Alamofire.SessionManager,

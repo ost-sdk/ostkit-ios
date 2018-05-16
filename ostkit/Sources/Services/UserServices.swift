@@ -9,18 +9,22 @@
 import Foundation
 import Alamofire
 
+/// User service wrapper
 public class UserServices: Services {
     
+    /// Filter definitions.
     public enum Filter: String {
         case all = "all"
         case neverAirdropped = "never_airdropped"
     }
     
+    /// Orderby definitions.
     public enum OrderBy: String {
         case creationTime = "creation_time"
         case name = "name"
     }
     
+    /// Order definitions.
     public enum Order: String {
         case desc = "desc"
         case asc = "asc"
