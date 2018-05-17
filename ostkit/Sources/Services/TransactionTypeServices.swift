@@ -17,6 +17,11 @@ public class TransactionTypeServices: Services {
         case userToCompany = "user_to_company"
     }
     
+    public enum CurrencyType: String {
+        case usd = "USD"
+        case bt = "BT"
+    }
+    
     /// Create a new transaction-type. Transaction types allow users to exchange branded tokens
     /// between each other for actions within the application or with the company.
     ///
@@ -46,12 +51,12 @@ public class TransactionTypeServices: Services {
     /// - returns: Alamofire's Request
     @discardableResult
     public func create(
-        name: String, kind: Kind, currencyType: String,
+        name: String, kind: Kind, currencyType: CurrencyType,
         currencyValue: Float, commissionPercent: Float,
         completionHandler: @escaping (ServiceResult<[String: Any]>) -> Void
         ) -> Request? {
         let ep = TransactionTypeEP.create(
-            name: name, currencyType: currencyType, kind: kind.rawValue,
+            name: name, currencyType: currencyType.rawValue, kind: kind.rawValue,
             currencyValue: currencyValue, commissionPercent: commissionPercent
         )
         return createRequest(

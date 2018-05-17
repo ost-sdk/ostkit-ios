@@ -43,14 +43,23 @@ internal struct RequestBuilder: URLRequestConvertible {
     private func generateQueryString(
         path: String, params: [String: Any], apiKey: String,
         requestTimestamp: TimeInterval, urlRequest: URLRequest) -> String {
+        
         var _params = params
         _params["api_key"] = apiKey
         _params["request_timestamp"] = String(format: "%.0f", requestTimestamp)
         
-        if let urlRequest = try? URLEncoding.default.encode(urlRequest, with: _params),
-            let body = urlRequest.httpBody,
-            let queryString = String(data: body, encoding: .utf8) {
-            return path + "?" + queryString
+        if let urlRequest = try? URLEncoding.default.encode(urlRequest, with: _params) {
+            if let url = urlRequest.url,
+                let queryString = url.query,
+                endpoint.method == .get {
+                return path + "?" + queryString.replacingOccurrences(of: "%20", with: "+")
+                
+            } else if let body = urlRequest.httpBody,
+                let queryString = String(data: body, encoding: .utf8),
+                endpoint.method == .post {
+                return path + "?" + queryString.replacingOccurrences(of: "%20", with: "+")
+                
+            }
         }
         
         return ""
@@ -91,7 +100,7 @@ internal struct RequestBuilder: URLRequestConvertible {
             apiKey: key, requestTimestamp: timeStamp,
             urlRequest: urlRequest
         )
-        
+    
         if let signature = try? generateApiSignature(stringToSign: queryString, apiSecret: secret) {
             _params["signature"] = signature
         }

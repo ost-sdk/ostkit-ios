@@ -7,15 +7,17 @@
 //
 
 import UIKit
+import ostkit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var sdk: OSTSDK!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        // Override point for customization after application launch.        
+        sdk = OSTSDK(baseURLString: BASE_URL_STRING, key: API_KEY, serect: API_SECRET, debugMode: true)
         return true
     }
 

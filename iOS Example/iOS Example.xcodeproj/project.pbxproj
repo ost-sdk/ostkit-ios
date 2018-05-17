@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		375E713420AD347100BB5BF9 /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375E713320AD347100BB5BF9 /* TransactionViewController.swift */; };
+		375E713720AD348200BB5BF9 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375E713620AD348200BB5BF9 /* UserViewController.swift */; };
+		375E713B20AD38BD00BB5BF9 /* TransTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375E713920AD38BD00BB5BF9 /* TransTableViewCell.swift */; };
+		375E713C20AD38BD00BB5BF9 /* TransTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 375E713A20AD38BD00BB5BF9 /* TransTableViewCell.xib */; };
+		375E713F20AD423100BB5BF9 /* ReuseableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375E713E20AD423100BB5BF9 /* ReuseableCell.swift */; };
 		37D9AC5920ABE50D009EB71E /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D9AC5820ABE50D009EB71E /* constants.swift */; };
 		37DF7AC620AACB91007C7712 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF7AC520AACB91007C7712 /* AppDelegate.swift */; };
 		37DF7AC820AACB91007C7712 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF7AC720AACB91007C7712 /* ViewController.swift */; };
@@ -56,6 +61,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		375E713320AD347100BB5BF9 /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
+		375E713620AD348200BB5BF9 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		375E713920AD38BD00BB5BF9 /* TransTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransTableViewCell.swift; sourceTree = "<group>"; };
+		375E713A20AD38BD00BB5BF9 /* TransTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransTableViewCell.xib; sourceTree = "<group>"; };
+		375E713E20AD423100BB5BF9 /* ReuseableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReuseableCell.swift; sourceTree = "<group>"; };
 		37D9AC5820ABE50D009EB71E /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
 		37DF7AC220AACB91007C7712 /* iOS Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37DF7AC520AACB91007C7712 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +89,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		375E713820AD38AF00BB5BF9 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				375E713E20AD423100BB5BF9 /* ReuseableCell.swift */,
+				375E713920AD38BD00BB5BF9 /* TransTableViewCell.swift */,
+				375E713A20AD38BD00BB5BF9 /* TransTableViewCell.xib */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
 		37DF7AB920AACB91007C7712 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +119,7 @@
 		37DF7AC420AACB91007C7712 /* iOS Example */ = {
 			isa = PBXGroup;
 			children = (
+				375E713820AD38AF00BB5BF9 /* cells */,
 				37DF7AC520AACB91007C7712 /* AppDelegate.swift */,
 				37DF7AC720AACB91007C7712 /* ViewController.swift */,
 				37DF7AC920AACB91007C7712 /* Main.storyboard */,
@@ -106,6 +127,8 @@
 				37DF7ACE20AACB91007C7712 /* LaunchScreen.storyboard */,
 				37DF7AD120AACB91007C7712 /* Info.plist */,
 				37D9AC5820ABE50D009EB71E /* constants.swift */,
+				375E713320AD347100BB5BF9 /* TransactionViewController.swift */,
+				375E713620AD348200BB5BF9 /* UserViewController.swift */,
 			);
 			path = "iOS Example";
 			sourceTree = "<group>";
@@ -204,6 +227,7 @@
 			files = (
 				37DF7AD020AACB91007C7712 /* LaunchScreen.storyboard in Resources */,
 				37DF7ACD20AACB91007C7712 /* Assets.xcassets in Resources */,
+				375E713C20AD38BD00BB5BF9 /* TransTableViewCell.xib in Resources */,
 				37DF7ACB20AACB91007C7712 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,9 +239,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				375E713B20AD38BD00BB5BF9 /* TransTableViewCell.swift in Sources */,
 				37DF7AC820AACB91007C7712 /* ViewController.swift in Sources */,
+				375E713F20AD423100BB5BF9 /* ReuseableCell.swift in Sources */,
+				375E713720AD348200BB5BF9 /* UserViewController.swift in Sources */,
 				37DF7AC620AACB91007C7712 /* AppDelegate.swift in Sources */,
 				37D9AC5920ABE50D009EB71E /* constants.swift in Sources */,
+				375E713420AD347100BB5BF9 /* TransactionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
