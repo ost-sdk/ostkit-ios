@@ -1,6 +1,6 @@
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/OSTKit.svg)](https://img.shields.io/cocoapods/v/OSTKit.svg)
 
-OSTKit is an api wrapper written in swift for [ost kit](https://ost.com) . The complete blockchain toolkit for busiess
+OSTKit is an api wrapper written in swift for [ost kit](https://ost.com) . The complete blockchain toolkit for business
 
 ## Requirements
 
