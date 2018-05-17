@@ -91,43 +91,19 @@
 			isa = PBXGroup;
 			children = (
 				37548E4320A989B400D665B4 /* ostkit.h */,
-				37F6D98220ABEF6400C384D8 /* EndPoints */,
-				371C577C20AB5746008D72B9 /* Builders */,
-				371C577B20AB5746008D72B9 /* Helpers */,
-				371C577A20AB5746008D72B9 /* Services */,
-				37DF7A9F20AAA170007C7712 /* OSTSDK.swift */,
-			);
-			path = Sources;
-			sourceTree = "<group>";
-		};
-		371C577A20AB5746008D72B9 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				37F6D98020ABED4500C384D8 /* Services.swift */,
-				37DF7AA120AAA23A007C7712 /* UserServices.swift */,
-				37F6D97E20ABEB1800C384D8 /* TransactionTypeServices.swift */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		371C577B20AB5746008D72B9 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				37548E5E20A9F55C00D665B4 /* Helpers.swift */,
-				371C577520AB4E84008D72B9 /* CustomResponse.swift */,
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
-		371C577C20AB5746008D72B9 /* Builders */ = {
-			isa = PBXGroup;
-			children = (
+				37F6D98320ABEF6E00C384D8 /* EndPoint.swift */,
 				37F6D98520ABF15300C384D8 /* RequestBuilder.swift */,
 				37DF7A9B20AAA0A9007C7712 /* UserEndPoint.swift */,
 				375380E020AB59A6005279D8 /* AirDropEndPoint.swift */,
 				37F6D97C20ABE5F700C384D8 /* TransactionTypeEndPoint.swift */,
+				37548E5E20A9F55C00D665B4 /* Helpers.swift */,
+				371C577520AB4E84008D72B9 /* CustomResponse.swift */,
+				37F6D98020ABED4500C384D8 /* Services.swift */,
+				37DF7AA120AAA23A007C7712 /* UserServices.swift */,
+				37F6D97E20ABEB1800C384D8 /* TransactionTypeServices.swift */,
+				37DF7A9F20AAA170007C7712 /* OSTSDK.swift */,
 			);
-			path = Builders;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		37548E3620A989B400D665B4 = {
@@ -165,14 +141,6 @@
 				37548E5020A989B400D665B4 /* Info.plist */,
 			);
 			path = ostkitTests;
-			sourceTree = "<group>";
-		};
-		37F6D98220ABEF6400C384D8 /* EndPoints */ = {
-			isa = PBXGroup;
-			children = (
-				37F6D98320ABEF6E00C384D8 /* EndPoint.swift */,
-			);
-			path = EndPoints;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
