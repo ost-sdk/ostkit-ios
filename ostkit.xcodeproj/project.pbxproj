@@ -90,6 +90,7 @@
 		371C577820AB56ED008D72B9 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				37548E4320A989B400D665B4 /* ostkit.h */,
 				37F6D98220ABEF6400C384D8 /* EndPoints */,
 				371C577C20AB5746008D72B9 /* Builders */,
 				371C577B20AB5746008D72B9 /* Helpers */,
@@ -152,7 +153,6 @@
 			children = (
 				371C577820AB56ED008D72B9 /* Sources */,
 				371C576F20AB381D008D72B9 /* frameworks */,
-				37548E4320A989B400D665B4 /* ostkit.h */,
 				37548E4420A989B400D665B4 /* Info.plist */,
 			);
 			path = ostkit;
