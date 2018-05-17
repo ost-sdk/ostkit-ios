@@ -115,9 +115,47 @@
                     <view key="view" contentMode="scaleToFill" id="duF-cy-7ZP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Nc6-vv-jPW">
+                                <rect key="frame" x="8" y="20" width="359" height="587"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="oL1-gf-U0d">
+                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZs-EE-jzM">
+                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="60"/>
+                                        <state key="normal" title="Add User"/>
+                                        <connections>
+                                            <action selector="addUser:" destination="wXt-ij-BqQ" eventType="touchUpInside" id="t2L-rS-Kz5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yJZ-Pl-CXD">
+                                        <rect key="frame" x="187.5" y="0.0" width="187.5" height="60"/>
+                                        <state key="normal" title="Send Airdrop"/>
+                                        <connections>
+                                            <action selector="sendAirdrop:" destination="wXt-ij-BqQ" eventType="touchUpInside" id="WTc-9B-vv2"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Nc6-vv-jPW" firstAttribute="leading" secondItem="amL-Uw-OW1" secondAttribute="leading" constant="8" id="1vZ-De-JUi"/>
+                            <constraint firstItem="amL-Uw-OW1" firstAttribute="bottom" secondItem="Nc6-vv-jPW" secondAttribute="bottom" constant="60" id="6KL-Xk-Cz4"/>
+                            <constraint firstItem="Nc6-vv-jPW" firstAttribute="top" secondItem="amL-Uw-OW1" secondAttribute="top" id="Q9M-jC-kIJ"/>
+                            <constraint firstItem="amL-Uw-OW1" firstAttribute="trailing" secondItem="oL1-gf-U0d" secondAttribute="trailing" id="XC3-LZ-nq9"/>
+                            <constraint firstItem="amL-Uw-OW1" firstAttribute="bottom" secondItem="oL1-gf-U0d" secondAttribute="bottom" id="bis-cW-Bc5"/>
+                            <constraint firstItem="amL-Uw-OW1" firstAttribute="trailing" secondItem="Nc6-vv-jPW" secondAttribute="trailing" constant="8" id="ejR-rM-SLp"/>
+                            <constraint firstItem="oL1-gf-U0d" firstAttribute="top" secondItem="Nc6-vv-jPW" secondAttribute="bottom" id="m2L-z1-FVC"/>
+                            <constraint firstItem="oL1-gf-U0d" firstAttribute="leading" secondItem="amL-Uw-OW1" secondAttribute="leading" id="xrg-op-vNi"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="amL-Uw-OW1"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="Nc6-vv-jPW" id="i2F-fk-6ob"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l8n-uk-9eg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
