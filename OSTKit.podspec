@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "OSTKit"
-  s.version      = "0.0.4"
+  s.version      = "0.0.5"
   s.summary      = "Simple Token API wrapper for iOS"
   s.homepage     = "https://github.com/vanductai/ostkit-ios"
   s.license      = {:type => "MIT", :file => "License.md"}

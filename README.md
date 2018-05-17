@@ -17,9 +17,9 @@ OSTKit is an api wrapper written in swift for [ost kit](https://ost.com) . The c
 $ gem install cocoapods
 ```
 
-> CocoaPods 1.1+ is required to build Alamofire 4.0+.
+> CocoaPods 1.1+ is required to build OSTKit 4.0+.
 
-To integrate Alamofire into your Xcode project using CocoaPods, specify it in your `Podfile`:
+To integrate OSTKit into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
@@ -27,7 +27,7 @@ platform :ios, '10.0'
 use_frameworks!
 
 target '<Your Target Name>' do
-    pod 'OSTKit', '~> 0.0.4'
+    pod 'OSTKit', '~> 0.0.5'
 end
 ```
 
@@ -48,23 +48,23 @@ $ brew update
 $ brew install carthage
 ```
 
-To integrate Alamofire into your Xcode project using Carthage, specify it in your `Cartfile`:
+To integrate OSTKit into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "vanductai/ostkit-ios" ~> 0.0.4
+github "vanductai/ostkit-ios" ~> 0.0.5
 ```
 
-Run `carthage update` to build the framework and drag the built `Alamofire.framework` into your Xcode project.
+Run `carthage update` to build the framework and drag the built `ostkit.framework` into your Xcode project.
 
 ### Swift Package Manager
 
-The [Swift Package Manager](https://swift.org/package-manager/) is a tool for automating the distribution of Swift code and is integrated into the `swift` compiler. It is in early development, but Alamofire does support its use on supported platforms. 
+The [Swift Package Manager](https://swift.org/package-manager/) is a tool for automating the distribution of Swift code and is integrated into the `swift` compiler. 
 
-Once you have your Swift package set up, adding Alamofire as a dependency is as easy as adding it to the `dependencies` value of your `Package.swift`.
+Once you have your Swift package set up, adding OSTKit as a dependency is as easy as adding it to the `dependencies` value of your `Package.swift`.
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/vanductai/ostkit-ios.git", from: "0.0.4")
+    .package(url: "https://github.com/vanductai/ostkit-ios.git", from: "0.0.5")
 ]
 ```
 
