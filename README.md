@@ -1,4 +1,4 @@
-[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/OSTKit.svg)](https://img.shields.io/cocoapods/v/OSTKit.svg)
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/OSTKit.svg)](https://img.shields.io/cocoapods/v/OSTKit.svg) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 OSTKit is an api wrapper written in swift for [ost kit](https://ost.com) . The complete blockchain toolkit for business
 
@@ -51,7 +51,7 @@ $ brew install carthage
 To integrate OSTKit into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "vanductai/ostkit-ios" ~> 0.0.5
+github "vanductai/ostkit-ios" ~> 0.0.6
 ```
 
 Run `carthage update` to build the framework and drag the built `ostkit.framework` into your Xcode project.
