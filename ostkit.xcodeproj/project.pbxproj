@@ -15,6 +15,8 @@
 		37548E4F20A989B400D665B4 /* ostkitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37548E4E20A989B400D665B4 /* ostkitTests.swift */; };
 		37548E5120A989B400D665B4 /* ostkit.h in Headers */ = {isa = PBXBuildFile; fileRef = 37548E4320A989B400D665B4 /* ostkit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		37548E5F20A9F55C00D665B4 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37548E5E20A9F55C00D665B4 /* Helpers.swift */; };
+		37A267DF20ADCA4500F46FE3 /* License.md in Resources */ = {isa = PBXBuildFile; fileRef = 37A267DD20ADCA4500F46FE3 /* License.md */; };
+		37A267E020ADCA4500F46FE3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 37A267DE20ADCA4500F46FE3 /* README.md */; };
 		37DF7A9C20AAA0A9007C7712 /* UserEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF7A9B20AAA0A9007C7712 /* UserEndPoint.swift */; };
 		37DF7AA020AAA170007C7712 /* OSTSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF7A9F20AAA170007C7712 /* OSTSDK.swift */; };
 		37DF7AA220AAA23A007C7712 /* UserServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF7AA120AAA23A007C7712 /* UserServices.swift */; };
@@ -47,6 +49,8 @@
 		37548E4E20A989B400D665B4 /* ostkitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ostkitTests.swift; sourceTree = "<group>"; };
 		37548E5020A989B400D665B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37548E5E20A9F55C00D665B4 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		37A267DD20ADCA4500F46FE3 /* License.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = License.md; sourceTree = "<group>"; };
+		37A267DE20ADCA4500F46FE3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		37DF7A9B20AAA0A9007C7712 /* UserEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEndPoint.swift; sourceTree = "<group>"; };
 		37DF7A9F20AAA170007C7712 /* OSTSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSTSDK.swift; sourceTree = "<group>"; };
 		37DF7AA120AAA23A007C7712 /* UserServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServices.swift; sourceTree = "<group>"; };
@@ -109,6 +113,8 @@
 		37548E3620A989B400D665B4 = {
 			isa = PBXGroup;
 			children = (
+				37A267DD20ADCA4500F46FE3 /* License.md */,
+				37A267DE20ADCA4500F46FE3 /* README.md */,
 				37548E4220A989B400D665B4 /* ostkit */,
 				37548E4D20A989B400D665B4 /* ostkitTests */,
 				37548E4120A989B400D665B4 /* Products */,
@@ -237,6 +243,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37A267E020ADCA4500F46FE3 /* README.md in Resources */,
+				37A267DF20ADCA4500F46FE3 /* License.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
