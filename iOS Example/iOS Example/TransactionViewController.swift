@@ -77,6 +77,14 @@ class TransactionViewController: UIViewController {
                 textField.keyboardType = .numberPad
             }
             createTransAlert.addAction(UIAlertAction(title: "Done", style: .default, handler: { action in
+                
+                let alert = UIAlertController(
+                    title: "Executing \(kind) transaction",
+                    message: nil,
+                    preferredStyle: .alert
+                )
+                self.present(alert, animated: true, completion: nil)
+                
                 let name = createTransAlert.textFields![0].text ?? ""
                 let value = createTransAlert.textFields![1].text ?? ""
                 let commission = createTransAlert.textFields![2].text ?? ""
@@ -87,6 +95,7 @@ class TransactionViewController: UIViewController {
                 commissionPercent: Float(commission)!) {
                     [weak self] response in
                     guard let strongSelf = self else { return }
+                    strongSelf.dismiss(animated: true, completion: nil)
                     switch response {
                     case .success(let json):
                         debugPrint(json)
@@ -169,6 +178,40 @@ class TransactionViewController: UIViewController {
     @IBAction func buttonCreatePressed(_ sender: Any) {
         create()
     }
+    
+    func delay(_ delay:Double, closure:@escaping ()->()) {
+        DispatchQueue.main.asyncAfter(
+            deadline: DispatchTime.now() + Double(Int64(delay * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC), execute: closure)
+    }
+    
+    func userActionHanler(tran: [String: Any]) {
+        let kind = tran["name"] as! String
+        
+        let alert = UIAlertController(
+            title: "Executing \(kind) transaction",
+            message: nil,
+            preferredStyle: .alert
+        )
+        present(alert, animated: true, completion: nil)
+        let uuid = "e6f7cfc1-6d15-4ad3-a333-2170248af658"
+        let comuuid = COM_UUID
+        
+        services.execute(fromUUID: comuuid, toUUID: uuid, transKind: kind) {
+            [weak self] response in
+            guard let strongSelf = self else { return }
+            strongSelf.dismiss(animated: true, completion: nil)
+            switch response {
+            case .success(let json):
+                debugPrint(json)
+                
+                if let _ = json["data"] as? [String: Any] {
+                }
+                
+            case .failure(let error):
+                debugPrint(error)
+            }
+        }
+    }
 }
 
 extension TransactionViewController: UITableViewDelegate, UITableViewDataSource {
@@ -189,6 +232,7 @@ extension TransactionViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let tran = trans[indexPath.row]
+        userActionHanler(tran: tran)
         execute(tran)
     }
 }
