@@ -9,12 +9,27 @@
 import UIKit
 import ostkit
 
+class User {
+    var name = ""
+    var point = ""
+    var uuid = ""
+    var actionHandler: ((User)->Void)?
+    
+    init(dict: [String: Any], handler: ((User)->Void)?) {
+        name = dict["name"] as? String ?? ""
+        point = dict["token_balance"] as? String ?? ""
+        uuid = dict["uuid"] as? String ?? ""
+        actionHandler = handler
+    }
+}
+
 class UserViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    private var users: [[String: Any]] = []
+    private var users: [User] = []
     private var services: UserServices!
+    private var transServices: TransactionTypeServices!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,9 +37,11 @@ class UserViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = 44
+        tableView.register(UserTableViewCell.self)
         
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
         services = appDelegate!.sdk.userServices()
+        transServices = appDelegate!.sdk.transactionServices()
         
         loadUsers()
     }
@@ -36,12 +53,48 @@ class UserViewController: UIViewController {
             switch response {
             case .success(let json):
                 if let data = json["data"] as? [String: Any] {
-                    strongSelf.users = data["economy_users"] as? [[String: Any]] ?? []
+                    let userDicts = data["economy_users"] as? [[String: Any]] ?? []
+                    debugPrint(userDicts)
+                    strongSelf.users = userDicts.map({ User(dict: $0, handler: strongSelf.userActionHanler) })
                     strongSelf.tableView.reloadData()
                 }
                 
             case .failure(let error):
                 debugPrint(error)
+            }
+        }
+    }
+    func delay(_ delay:Double, closure:@escaping ()->()) {
+        DispatchQueue.main.asyncAfter(
+            deadline: DispatchTime.now() + Double(Int64(delay * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC), execute: closure)
+    }
+    
+    func userActionHanler(user: User) {
+        let alert = UIAlertController(
+            title: "Executing reward transaction",
+            message: nil,
+            preferredStyle: .alert
+        )
+        present(alert, animated: true, completion: nil)
+        let uuid = user.uuid
+        let comuuid = COM_UUID
+        let kind = "Reward"
+        transServices.execute(fromUUID: comuuid, toUUID: uuid, transKind: kind) {
+            [weak self] response in
+            guard let strongSelf = self else { return }
+            switch response {
+            case .success(let json):
+                debugPrint(json)
+                if let _ = json["data"] as? [String: Any] {
+                    strongSelf.delay(5) {
+                        strongSelf.loadUsers()
+                        strongSelf.dismiss(animated: true, completion: nil)
+                    }
+                }
+                
+            case .failure(let error):
+                debugPrint(error)
+                strongSelf.dismiss(animated: true, completion: nil)
             }
         }
     }
@@ -115,14 +168,9 @@ extension UserViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCell(withIdentifier: "cell")
-        if cell == nil {
-            cell = UITableViewCell(style: .value1, reuseIdentifier: "cell")
-        }
-        let user = users[indexPath.row]
-        cell?.textLabel?.text = user["name"] as? String ?? ""
-        cell?.detailTextLabel?.text = user["token_balance"] as? String ?? ""
-        return cell!
+        let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as UserTableViewCell
+        cell.user = users[indexPath.row]
+        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

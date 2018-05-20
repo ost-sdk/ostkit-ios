@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		372BF2BA20B14DB40054BF10 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372BF2B820B14DB40054BF10 /* UserTableViewCell.swift */; };
+		372BF2BB20B14DB40054BF10 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 372BF2B920B14DB40054BF10 /* UserTableViewCell.xib */; };
 		375E713420AD347100BB5BF9 /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375E713320AD347100BB5BF9 /* TransactionViewController.swift */; };
 		375E713720AD348200BB5BF9 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375E713620AD348200BB5BF9 /* UserViewController.swift */; };
 		375E713B20AD38BD00BB5BF9 /* TransTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375E713920AD38BD00BB5BF9 /* TransTableViewCell.swift */; };
@@ -61,6 +63,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		372BF2B820B14DB40054BF10 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		372BF2B920B14DB40054BF10 /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
 		375E713320AD347100BB5BF9 /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
 		375E713620AD348200BB5BF9 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		375E713920AD38BD00BB5BF9 /* TransTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransTableViewCell.swift; sourceTree = "<group>"; };
@@ -95,6 +99,8 @@
 				375E713E20AD423100BB5BF9 /* ReuseableCell.swift */,
 				375E713920AD38BD00BB5BF9 /* TransTableViewCell.swift */,
 				375E713A20AD38BD00BB5BF9 /* TransTableViewCell.xib */,
+				372BF2B820B14DB40054BF10 /* UserTableViewCell.swift */,
+				372BF2B920B14DB40054BF10 /* UserTableViewCell.xib */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -229,6 +235,7 @@
 				37DF7ACD20AACB91007C7712 /* Assets.xcassets in Resources */,
 				375E713C20AD38BD00BB5BF9 /* TransTableViewCell.xib in Resources */,
 				37DF7ACB20AACB91007C7712 /* Main.storyboard in Resources */,
+				372BF2BB20B14DB40054BF10 /* UserTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +250,7 @@
 				37DF7AC820AACB91007C7712 /* ViewController.swift in Sources */,
 				375E713F20AD423100BB5BF9 /* ReuseableCell.swift in Sources */,
 				375E713720AD348200BB5BF9 /* UserViewController.swift in Sources */,
+				372BF2BA20B14DB40054BF10 /* UserTableViewCell.swift in Sources */,
 				37DF7AC620AACB91007C7712 /* AppDelegate.swift in Sources */,
 				37D9AC5920ABE50D009EB71E /* constants.swift in Sources */,
 				375E713420AD347100BB5BF9 /* TransactionViewController.swift in Sources */,
