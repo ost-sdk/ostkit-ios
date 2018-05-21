@@ -51,7 +51,7 @@ $ brew install carthage
 To integrate OSTKit into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "vanductai/ostkit-ios" ~> 0.0.6
+github "ost-sdk/ostkit-ios" ~> 0.0.6
 ```
 
 Run `carthage update` to build the framework and drag the built `ostkit.framework` into your Xcode project.
@@ -64,7 +64,7 @@ Once you have your Swift package set up, adding OSTKit as a dependency is as eas
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/vanductai/ostkit-ios.git", from: "0.0.5")
+    .package(url: "https://github.com/ost-sdk/ostkit-ios.git", from: "0.0.8")
 ]
 ```
 
