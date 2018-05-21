@@ -25,6 +25,20 @@
 		371C577220AB3834008D72B9 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 371C577020AB3834008D72B9 /* Alamofire.framework */; };
 		371C577320AB3834008D72B9 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 371C577120AB3834008D72B9 /* CryptoSwift.framework */; };
 		371C577620AB4E84008D72B9 /* CustomResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371C577520AB4E84008D72B9 /* CustomResponse.swift */; };
+		3726DCD820B30A810026F9AF /* ostkit.h in Headers */ = {isa = PBXBuildFile; fileRef = 37548E4320A989B400D665B4 /* ostkit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3726DCD920B30A810026F9AF /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F6D98320ABEF6E00C384D8 /* EndPoint.swift */; };
+		3726DCDA20B30A810026F9AF /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F6D98520ABF15300C384D8 /* RequestBuilder.swift */; };
+		3726DCDB20B30A810026F9AF /* UserEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF7A9B20AAA0A9007C7712 /* UserEndPoint.swift */; };
+		3726DCDC20B30A810026F9AF /* AirDropEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375380E020AB59A6005279D8 /* AirDropEndPoint.swift */; };
+		3726DCDD20B30A810026F9AF /* TransactionTypeEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F6D97C20ABE5F700C384D8 /* TransactionTypeEndPoint.swift */; };
+		3726DCDE20B30A810026F9AF /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37548E5E20A9F55C00D665B4 /* Helpers.swift */; };
+		3726DCDF20B30A810026F9AF /* CustomResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371C577520AB4E84008D72B9 /* CustomResponse.swift */; };
+		3726DCE020B30A810026F9AF /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F6D98020ABED4500C384D8 /* Services.swift */; };
+		3726DCE120B30A810026F9AF /* UserServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF7AA120AAA23A007C7712 /* UserServices.swift */; };
+		3726DCE220B30A810026F9AF /* TransactionTypeServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F6D97E20ABEB1800C384D8 /* TransactionTypeServices.swift */; };
+		3726DCE320B30A810026F9AF /* OSTSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF7A9F20AAA170007C7712 /* OSTSDK.swift */; };
+		3726DCE620B30AB70026F9AF /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3726DCE420B30AB70026F9AF /* Alamofire.framework */; };
+		3726DCE720B30AB70026F9AF /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3726DCE520B30AB70026F9AF /* CryptoSwift.framework */; };
 		375380E120AB59A6005279D8 /* AirDropEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375380E020AB59A6005279D8 /* AirDropEndPoint.swift */; };
 		37548E4A20A989B400D665B4 /* ostkit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37548E4020A989B400D665B4 /* ostkit.framework */; };
 		37548E4F20A989B400D665B4 /* ostkitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37548E4E20A989B400D665B4 /* ostkitTests.swift */; };
@@ -68,6 +82,9 @@
 		371C577020AB3834008D72B9 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = SOURCE_ROOT; };
 		371C577120AB3834008D72B9 /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = Carthage/Build/iOS/CryptoSwift.framework; sourceTree = SOURCE_ROOT; };
 		371C577520AB4E84008D72B9 /* CustomResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomResponse.swift; sourceTree = "<group>"; };
+		3726DCD020B30A640026F9AF /* ostkit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ostkit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3726DCE420B30AB70026F9AF /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/watchOS/Alamofire.framework; sourceTree = "<group>"; };
+		3726DCE520B30AB70026F9AF /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = Carthage/Build/watchOS/CryptoSwift.framework; sourceTree = "<group>"; };
 		375380E020AB59A6005279D8 /* AirDropEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirDropEndPoint.swift; sourceTree = "<group>"; };
 		37548E4020A989B400D665B4 /* ostkit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ostkit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37548E4320A989B400D665B4 /* ostkit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ostkit.h; sourceTree = "<group>"; };
@@ -106,6 +123,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3726DCCC20B30A640026F9AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3726DCE620B30AB70026F9AF /* Alamofire.framework in Frameworks */,
+				3726DCE720B30AB70026F9AF /* CryptoSwift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		37548E3C20A989B400D665B4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -129,6 +155,8 @@
 		3709076F20B2B0450007F5CB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3726DCE420B30AB70026F9AF /* Alamofire.framework */,
+				3726DCE520B30AB70026F9AF /* CryptoSwift.framework */,
 				3709077A20B2B1140007F5CB /* Alamofire.framework */,
 				3709077B20B2B1140007F5CB /* CryptoSwift.framework */,
 				371C577020AB3834008D72B9 /* Alamofire.framework */,
@@ -171,6 +199,7 @@
 				37548E4920A989B400D665B4 /* ostkitTests.xctest */,
 				3709074A20B2A9F20007F5CB /* ostkit.framework */,
 				3709075220B2A9F20007F5CB /* ostkit macOSTests.xctest */,
+				3726DCD020B30A640026F9AF /* ostkit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -214,6 +243,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				3709076120B2AEFF0007F5CB /* ostkit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3726DCCD20B30A640026F9AF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3726DCD820B30A810026F9AF /* ostkit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +301,24 @@
 			productName = "ostkit macOSTests";
 			productReference = 3709075220B2A9F20007F5CB /* ostkit macOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3726DCCF20B30A640026F9AF /* ostkit watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3726DCD520B30A640026F9AF /* Build configuration list for PBXNativeTarget "ostkit watchOS" */;
+			buildPhases = (
+				3726DCCB20B30A640026F9AF /* Sources */,
+				3726DCCC20B30A640026F9AF /* Frameworks */,
+				3726DCCD20B30A640026F9AF /* Headers */,
+				3726DCCE20B30A640026F9AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ostkit watchOS";
+			productName = "ostkit watchOS";
+			productReference = 3726DCD020B30A640026F9AF /* ostkit.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 		37548E3F20A989B400D665B4 /* ostkit */ = {
 			isa = PBXNativeTarget;
@@ -318,6 +373,9 @@
 					3709075120B2A9F20007F5CB = {
 						CreatedOnToolsVersion = 9.3.1;
 					};
+					3726DCCF20B30A640026F9AF = {
+						CreatedOnToolsVersion = 9.3.1;
+					};
 					37548E3F20A989B400D665B4 = {
 						CreatedOnToolsVersion = 9.3.1;
 						LastSwiftMigration = 0930;
@@ -344,6 +402,7 @@
 				37548E4820A989B400D665B4 /* ostkitTests */,
 				3709074920B2A9F20007F5CB /* ostkit macOS */,
 				3709075120B2A9F20007F5CB /* ostkit macOSTests */,
+				3726DCCF20B30A640026F9AF /* ostkit watchOS */,
 			);
 		};
 /* End PBXProject section */
@@ -357,6 +416,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		3709075020B2A9F20007F5CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3726DCCE20B30A640026F9AF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -437,6 +503,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3726DCCB20B30A640026F9AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3726DCDD20B30A810026F9AF /* TransactionTypeEndPoint.swift in Sources */,
+				3726DCE120B30A810026F9AF /* UserServices.swift in Sources */,
+				3726DCDF20B30A810026F9AF /* CustomResponse.swift in Sources */,
+				3726DCE320B30A810026F9AF /* OSTSDK.swift in Sources */,
+				3726DCDE20B30A810026F9AF /* Helpers.swift in Sources */,
+				3726DCE220B30A810026F9AF /* TransactionTypeServices.swift in Sources */,
+				3726DCDB20B30A810026F9AF /* UserEndPoint.swift in Sources */,
+				3726DCD920B30A810026F9AF /* EndPoint.swift in Sources */,
+				3726DCE020B30A810026F9AF /* Services.swift in Sources */,
+				3726DCDC20B30A810026F9AF /* AirDropEndPoint.swift in Sources */,
+				3726DCDA20B30A810026F9AF /* RequestBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -587,6 +671,70 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		3726DCD620B30A640026F9AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = L8BLZZ773P;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.duongkhong.ostkit-watchOS";
+				PRODUCT_NAME = ostkit;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		3726DCD720B30A640026F9AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = L8BLZZ773P;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.duongkhong.ostkit-watchOS";
+				PRODUCT_NAME = ostkit;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
@@ -828,6 +976,15 @@
 			buildConfigurations = (
 				3709075D20B2A9F20007F5CB /* Debug */,
 				3709075E20B2A9F20007F5CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3726DCD520B30A640026F9AF /* Build configuration list for PBXNativeTarget "ostkit watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3726DCD620B30A640026F9AF /* Debug */,
+				3726DCD720B30A640026F9AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
