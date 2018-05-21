@@ -39,7 +39,7 @@
 		3726DCE320B30A810026F9AF /* OSTSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF7A9F20AAA170007C7712 /* OSTSDK.swift */; };
 		3726DCE620B30AB70026F9AF /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3726DCE420B30AB70026F9AF /* Alamofire.framework */; };
 		3726DCE720B30AB70026F9AF /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3726DCE520B30AB70026F9AF /* CryptoSwift.framework */; };
-		3726DCF620B30BC80026F9AF /* ostkit_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3726DCED20B30BC80026F9AF /* ostkit_tvOS.framework */; };
+		3726DCF620B30BC80026F9AF /* ostkit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3726DCED20B30BC80026F9AF /* ostkit.framework */; };
 		3726DD0620B30C2A0026F9AF /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3726DD0420B30C290026F9AF /* Alamofire.framework */; };
 		3726DD0720B30C2A0026F9AF /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3726DD0520B30C290026F9AF /* CryptoSwift.framework */; };
 		3726DD0A20B30CC90026F9AF /* ostkit.h in Headers */ = {isa = PBXBuildFile; fileRef = 37548E4320A989B400D665B4 /* ostkit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -107,7 +107,7 @@
 		3726DCD020B30A640026F9AF /* ostkit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ostkit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3726DCE420B30AB70026F9AF /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/watchOS/Alamofire.framework; sourceTree = "<group>"; };
 		3726DCE520B30AB70026F9AF /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = Carthage/Build/watchOS/CryptoSwift.framework; sourceTree = "<group>"; };
-		3726DCED20B30BC80026F9AF /* ostkit_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ostkit_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3726DCED20B30BC80026F9AF /* ostkit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ostkit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3726DCF520B30BC80026F9AF /* ostkit tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ostkit tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3726DD0420B30C290026F9AF /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/tvOS/Alamofire.framework; sourceTree = "<group>"; };
 		3726DD0520B30C290026F9AF /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = Carthage/Build/tvOS/CryptoSwift.framework; sourceTree = "<group>"; };
@@ -171,7 +171,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3726DCF620B30BC80026F9AF /* ostkit_tvOS.framework in Frameworks */,
+				3726DCF620B30BC80026F9AF /* ostkit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,7 +245,7 @@
 				3709074A20B2A9F20007F5CB /* ostkit.framework */,
 				3709075220B2A9F20007F5CB /* ostkit macOSTests.xctest */,
 				3726DCD020B30A640026F9AF /* ostkit.framework */,
-				3726DCED20B30BC80026F9AF /* ostkit_tvOS.framework */,
+				3726DCED20B30BC80026F9AF /* ostkit.framework */,
 				3726DCF520B30BC80026F9AF /* ostkit tvOSTests.xctest */,
 			);
 			name = Products;
@@ -392,7 +392,7 @@
 			);
 			name = "ostkit tvOS";
 			productName = "ostkit tvOS";
-			productReference = 3726DCED20B30BC80026F9AF /* ostkit_tvOS.framework */;
+			productReference = 3726DCED20B30BC80026F9AF /* ostkit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		3726DCF420B30BC80026F9AF /* ostkit tvOSTests */ = {
@@ -939,7 +939,7 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.duongkhong.ostkit-tvOS";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = ostkit;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
@@ -971,7 +971,7 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.duongkhong.ostkit-tvOS";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = ostkit;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
