@@ -6,7 +6,7 @@
 //  Copyright © 2018 Duong Khong. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import Foundation;
 
 //! Project version number for ostkit.
 FOUNDATION_EXPORT double ostkitVersionNumber;
