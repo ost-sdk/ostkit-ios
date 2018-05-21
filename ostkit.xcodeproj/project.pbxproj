@@ -38,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3709074220B289F00007F5CB /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		371C577020AB3834008D72B9 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = SOURCE_ROOT; };
 		371C577120AB3834008D72B9 /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = Carthage/Build/iOS/CryptoSwift.framework; sourceTree = SOURCE_ROOT; };
 		371C577520AB4E84008D72B9 /* CustomResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomResponse.swift; sourceTree = "<group>"; };
@@ -91,31 +92,13 @@
 			name = frameworks;
 			sourceTree = "<group>";
 		};
-		371C577820AB56ED008D72B9 /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				37548E4320A989B400D665B4 /* ostkit.h */,
-				37F6D98320ABEF6E00C384D8 /* EndPoint.swift */,
-				37F6D98520ABF15300C384D8 /* RequestBuilder.swift */,
-				37DF7A9B20AAA0A9007C7712 /* UserEndPoint.swift */,
-				375380E020AB59A6005279D8 /* AirDropEndPoint.swift */,
-				37F6D97C20ABE5F700C384D8 /* TransactionTypeEndPoint.swift */,
-				37548E5E20A9F55C00D665B4 /* Helpers.swift */,
-				371C577520AB4E84008D72B9 /* CustomResponse.swift */,
-				37F6D98020ABED4500C384D8 /* Services.swift */,
-				37DF7AA120AAA23A007C7712 /* UserServices.swift */,
-				37F6D97E20ABEB1800C384D8 /* TransactionTypeServices.swift */,
-				37DF7A9F20AAA170007C7712 /* OSTSDK.swift */,
-			);
-			path = Sources;
-			sourceTree = "<group>";
-		};
 		37548E3620A989B400D665B4 = {
 			isa = PBXGroup;
 			children = (
+				3709074220B289F00007F5CB /* Package.swift */,
 				37A267DD20ADCA4500F46FE3 /* License.md */,
 				37A267DE20ADCA4500F46FE3 /* README.md */,
-				37548E4220A989B400D665B4 /* ostkit */,
+				37548E4220A989B400D665B4 /* Sources */,
 				37548E4D20A989B400D665B4 /* ostkitTests */,
 				37548E4120A989B400D665B4 /* Products */,
 			);
@@ -130,14 +113,25 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		37548E4220A989B400D665B4 /* ostkit */ = {
+		37548E4220A989B400D665B4 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				371C577820AB56ED008D72B9 /* Sources */,
-				371C576F20AB381D008D72B9 /* frameworks */,
 				37548E4420A989B400D665B4 /* Info.plist */,
+				37548E4320A989B400D665B4 /* ostkit.h */,
+				37F6D98320ABEF6E00C384D8 /* EndPoint.swift */,
+				37F6D98520ABF15300C384D8 /* RequestBuilder.swift */,
+				37DF7A9B20AAA0A9007C7712 /* UserEndPoint.swift */,
+				375380E020AB59A6005279D8 /* AirDropEndPoint.swift */,
+				37F6D97C20ABE5F700C384D8 /* TransactionTypeEndPoint.swift */,
+				37548E5E20A9F55C00D665B4 /* Helpers.swift */,
+				371C577520AB4E84008D72B9 /* CustomResponse.swift */,
+				37F6D98020ABED4500C384D8 /* Services.swift */,
+				37DF7AA120AAA23A007C7712 /* UserServices.swift */,
+				37F6D97E20ABEB1800C384D8 /* TransactionTypeServices.swift */,
+				37DF7A9F20AAA170007C7712 /* OSTSDK.swift */,
+				371C576F20AB381D008D72B9 /* frameworks */,
 			);
-			path = ostkit;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		37548E4D20A989B400D665B4 /* ostkitTests */ = {
@@ -448,7 +442,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = ostkit/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -480,7 +474,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = ostkit/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
