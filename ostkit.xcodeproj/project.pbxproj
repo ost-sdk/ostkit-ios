@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3709075320B2A9F20007F5CB /* ostkit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3709074A20B2A9F20007F5CB /* ostkit.framework */; };
+		3709076120B2AEFF0007F5CB /* ostkit.h in Headers */ = {isa = PBXBuildFile; fileRef = 37548E4320A989B400D665B4 /* ostkit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3709076220B2AEFF0007F5CB /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F6D98320ABEF6E00C384D8 /* EndPoint.swift */; };
+		3709076320B2AEFF0007F5CB /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F6D98520ABF15300C384D8 /* RequestBuilder.swift */; };
+		3709076420B2AEFF0007F5CB /* UserEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF7A9B20AAA0A9007C7712 /* UserEndPoint.swift */; };
+		3709076520B2AEFF0007F5CB /* AirDropEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375380E020AB59A6005279D8 /* AirDropEndPoint.swift */; };
+		3709076620B2AEFF0007F5CB /* TransactionTypeEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F6D97C20ABE5F700C384D8 /* TransactionTypeEndPoint.swift */; };
+		3709076720B2AEFF0007F5CB /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37548E5E20A9F55C00D665B4 /* Helpers.swift */; };
+		3709076820B2AEFF0007F5CB /* CustomResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371C577520AB4E84008D72B9 /* CustomResponse.swift */; };
+		3709076920B2AEFF0007F5CB /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F6D98020ABED4500C384D8 /* Services.swift */; };
+		3709076A20B2AEFF0007F5CB /* UserServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF7AA120AAA23A007C7712 /* UserServices.swift */; };
+		3709076B20B2AEFF0007F5CB /* TransactionTypeServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F6D97E20ABEB1800C384D8 /* TransactionTypeServices.swift */; };
+		3709076C20B2AEFF0007F5CB /* OSTSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF7A9F20AAA170007C7712 /* OSTSDK.swift */; };
+		3709077C20B2B1140007F5CB /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3709077A20B2B1140007F5CB /* Alamofire.framework */; };
+		3709077D20B2B1140007F5CB /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3709077B20B2B1140007F5CB /* CryptoSwift.framework */; };
 		371C577220AB3834008D72B9 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 371C577020AB3834008D72B9 /* Alamofire.framework */; };
 		371C577320AB3834008D72B9 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 371C577120AB3834008D72B9 /* CryptoSwift.framework */; };
 		371C577620AB4E84008D72B9 /* CustomResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371C577520AB4E84008D72B9 /* CustomResponse.swift */; };
@@ -28,6 +43,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		3709075420B2A9F20007F5CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37548E3720A989B400D665B4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3709074920B2A9F20007F5CB;
+			remoteInfo = "ostkit macOS";
+		};
 		37548E4B20A989B400D665B4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 37548E3720A989B400D665B4 /* Project object */;
@@ -39,6 +61,10 @@
 
 /* Begin PBXFileReference section */
 		3709074220B289F00007F5CB /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		3709074A20B2A9F20007F5CB /* ostkit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ostkit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3709075220B2A9F20007F5CB /* ostkit macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ostkit macOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3709077A20B2B1140007F5CB /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/Mac/Alamofire.framework; sourceTree = SOURCE_ROOT; };
+		3709077B20B2B1140007F5CB /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = Carthage/Build/Mac/CryptoSwift.framework; sourceTree = SOURCE_ROOT; };
 		371C577020AB3834008D72B9 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = SOURCE_ROOT; };
 		371C577120AB3834008D72B9 /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = Carthage/Build/iOS/CryptoSwift.framework; sourceTree = SOURCE_ROOT; };
 		371C577520AB4E84008D72B9 /* CustomResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomResponse.swift; sourceTree = "<group>"; };
@@ -63,6 +89,23 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3709074620B2A9F20007F5CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3709077C20B2B1140007F5CB /* Alamofire.framework in Frameworks */,
+				3709077D20B2B1140007F5CB /* CryptoSwift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3709074F20B2A9F20007F5CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3709075320B2A9F20007F5CB /* ostkit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		37548E3C20A989B400D665B4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -83,11 +126,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3709076F20B2B0450007F5CB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3709077A20B2B1140007F5CB /* Alamofire.framework */,
+				3709077B20B2B1140007F5CB /* CryptoSwift.framework */,
+				371C577020AB3834008D72B9 /* Alamofire.framework */,
+				371C577120AB3834008D72B9 /* CryptoSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3709077520B2B0D10007F5CB /* macOS frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "macOS frameworks";
+			sourceTree = "<group>";
+		};
 		371C576F20AB381D008D72B9 /* frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				371C577020AB3834008D72B9 /* Alamofire.framework */,
-				371C577120AB3834008D72B9 /* CryptoSwift.framework */,
 			);
 			name = frameworks;
 			sourceTree = "<group>";
@@ -101,6 +160,7 @@
 				37548E4220A989B400D665B4 /* Sources */,
 				37548E4D20A989B400D665B4 /* ostkitTests */,
 				37548E4120A989B400D665B4 /* Products */,
+				3709076F20B2B0450007F5CB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,6 +169,8 @@
 			children = (
 				37548E4020A989B400D665B4 /* ostkit.framework */,
 				37548E4920A989B400D665B4 /* ostkitTests.xctest */,
+				3709074A20B2A9F20007F5CB /* ostkit.framework */,
+				3709075220B2A9F20007F5CB /* ostkit macOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -116,6 +178,7 @@
 		37548E4220A989B400D665B4 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				3709077520B2B0D10007F5CB /* macOS frameworks */,
 				37548E4420A989B400D665B4 /* Info.plist */,
 				37548E4320A989B400D665B4 /* ostkit.h */,
 				37F6D98320ABEF6E00C384D8 /* EndPoint.swift */,
@@ -146,6 +209,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		3709074720B2A9F20007F5CB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3709076120B2AEFF0007F5CB /* ostkit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		37548E3D20A989B400D665B4 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -157,6 +228,43 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		3709074920B2A9F20007F5CB /* ostkit macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3709075F20B2A9F20007F5CB /* Build configuration list for PBXNativeTarget "ostkit macOS" */;
+			buildPhases = (
+				3709074520B2A9F20007F5CB /* Sources */,
+				3709074620B2A9F20007F5CB /* Frameworks */,
+				3709074720B2A9F20007F5CB /* Headers */,
+				3709074820B2A9F20007F5CB /* Resources */,
+				3709077420B2B05D0007F5CB /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ostkit macOS";
+			productName = "ostkit macOS";
+			productReference = 3709074A20B2A9F20007F5CB /* ostkit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3709075120B2A9F20007F5CB /* ostkit macOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3709076020B2A9F20007F5CB /* Build configuration list for PBXNativeTarget "ostkit macOSTests" */;
+			buildPhases = (
+				3709074E20B2A9F20007F5CB /* Sources */,
+				3709074F20B2A9F20007F5CB /* Frameworks */,
+				3709075020B2A9F20007F5CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3709075520B2A9F20007F5CB /* PBXTargetDependency */,
+			);
+			name = "ostkit macOSTests";
+			productName = "ostkit macOSTests";
+			productReference = 3709075220B2A9F20007F5CB /* ostkit macOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		37548E3F20A989B400D665B4 /* ostkit */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 37548E5420A989B400D665B4 /* Build configuration list for PBXNativeTarget "ostkit" */;
@@ -204,6 +312,12 @@
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Duong Khong";
 				TargetAttributes = {
+					3709074920B2A9F20007F5CB = {
+						CreatedOnToolsVersion = 9.3.1;
+					};
+					3709075120B2A9F20007F5CB = {
+						CreatedOnToolsVersion = 9.3.1;
+					};
 					37548E3F20A989B400D665B4 = {
 						CreatedOnToolsVersion = 9.3.1;
 						LastSwiftMigration = 0930;
@@ -228,11 +342,27 @@
 			targets = (
 				37548E3F20A989B400D665B4 /* ostkit */,
 				37548E4820A989B400D665B4 /* ostkitTests */,
+				3709074920B2A9F20007F5CB /* ostkit macOS */,
+				3709075120B2A9F20007F5CB /* ostkit macOSTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3709074820B2A9F20007F5CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3709075020B2A9F20007F5CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		37548E3E20A989B400D665B4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -252,6 +382,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3709077420B2B05D0007F5CB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/Mac/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/CryptoSwift.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
 		371C576E20AB37D6008D72B9 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -270,6 +415,31 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3709074520B2A9F20007F5CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3709076620B2AEFF0007F5CB /* TransactionTypeEndPoint.swift in Sources */,
+				3709076A20B2AEFF0007F5CB /* UserServices.swift in Sources */,
+				3709076820B2AEFF0007F5CB /* CustomResponse.swift in Sources */,
+				3709076C20B2AEFF0007F5CB /* OSTSDK.swift in Sources */,
+				3709076720B2AEFF0007F5CB /* Helpers.swift in Sources */,
+				3709076B20B2AEFF0007F5CB /* TransactionTypeServices.swift in Sources */,
+				3709076420B2AEFF0007F5CB /* UserEndPoint.swift in Sources */,
+				3709076220B2AEFF0007F5CB /* EndPoint.swift in Sources */,
+				3709076920B2AEFF0007F5CB /* Services.swift in Sources */,
+				3709076520B2AEFF0007F5CB /* AirDropEndPoint.swift in Sources */,
+				3709076320B2AEFF0007F5CB /* RequestBuilder.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3709074E20B2A9F20007F5CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		37548E3B20A989B400D665B4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -299,6 +469,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		3709075520B2A9F20007F5CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3709074920B2A9F20007F5CB /* ostkit macOS */;
+			targetProxy = 3709075420B2A9F20007F5CB /* PBXContainerItemProxy */;
+		};
 		37548E4C20A989B400D665B4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 37548E3F20A989B400D665B4 /* ostkit */;
@@ -307,6 +482,114 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		3709075B20B2A9F20007F5CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = L8BLZZ773P;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.duongkhong.ostkit-macOS";
+				PRODUCT_NAME = ostkit;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		3709075C20B2A9F20007F5CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = L8BLZZ773P;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.duongkhong.ostkit-macOS";
+				PRODUCT_NAME = ostkit;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		3709075D20B2A9F20007F5CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = L8BLZZ773P;
+				INFOPLIST_FILE = "ostkit macOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.duongkhong.ostkit-macOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		3709075E20B2A9F20007F5CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = L8BLZZ773P;
+				INFOPLIST_FILE = "ostkit macOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.duongkhong.ostkit-macOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
 		37548E5220A989B400D665B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -359,7 +642,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -416,7 +699,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -451,7 +734,7 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.duongkhong.ostkit;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = ostkit;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
@@ -483,7 +766,7 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.duongkhong.ostkit;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = ostkit;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -531,6 +814,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3709075F20B2A9F20007F5CB /* Build configuration list for PBXNativeTarget "ostkit macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3709075B20B2A9F20007F5CB /* Debug */,
+				3709075C20B2A9F20007F5CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3709076020B2A9F20007F5CB /* Build configuration list for PBXNativeTarget "ostkit macOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3709075D20B2A9F20007F5CB /* Debug */,
+				3709075E20B2A9F20007F5CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		37548E3A20A989B400D665B4 /* Build configuration list for PBXProject "ostkit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
