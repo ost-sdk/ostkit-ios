@@ -1,4 +1,6 @@
-[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/OSTKit.svg)](https://img.shields.io/cocoapods/v/OSTKit.svg) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/OSTKit.svg)](https://img.shields.io/cocoapods/v/OSTKit.svg) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![Swift Package Manager compatible](https://img.shields.io/badge/SPM-compatible-brightgreen.svg?style=flat&colorA=28a745&&colorB=4E4E4E)](https://github.com/apple/swift-package-manager)
+
+[![Platform](https://img.shields.io/badge/Platforms-iOS%20%7C%20macOS%20%7C%20watchOS%20%7C%20tvOS%20%7C%20Linux-4E4E4E.svg?colorA=28a745)](#installation)
 
 OSTKit is an api wrapper written in swift for [ost kit](https://ost.com) . The complete blockchain toolkit for business
 
