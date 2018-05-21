@@ -53,7 +53,7 @@ $ brew install carthage
 To integrate OSTKit into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "ost-sdk/ostkit-ios" ~> 0.0.6
+github "ost-sdk/ostkit-ios" ~> 0.0.9
 ```
 
 Run `carthage update` to build the framework and drag the built `ostkit.framework` into your Xcode project.
