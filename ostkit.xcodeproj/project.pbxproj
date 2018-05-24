@@ -59,6 +59,9 @@
 		37548E4F20A989B400D665B4 /* ostkitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37548E4E20A989B400D665B4 /* ostkitTests.swift */; };
 		37548E5120A989B400D665B4 /* ostkit.h in Headers */ = {isa = PBXBuildFile; fileRef = 37548E4320A989B400D665B4 /* ostkit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		37548E5F20A9F55C00D665B4 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37548E5E20A9F55C00D665B4 /* Helpers.swift */; };
+		375CE6C820B672790014DBE2 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 375CE6C720B672790014DBE2 /* .travis.yml */; };
+		375CE6CA20B696100014DBE2 /* ostkitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37548E4E20A989B400D665B4 /* ostkitTests.swift */; };
+		375CE6CB20B696120014DBE2 /* ostkitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37548E4E20A989B400D665B4 /* ostkitTests.swift */; };
 		37A267DF20ADCA4500F46FE3 /* License.md in Resources */ = {isa = PBXBuildFile; fileRef = 37A267DD20ADCA4500F46FE3 /* License.md */; };
 		37A267E020ADCA4500F46FE3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 37A267DE20ADCA4500F46FE3 /* README.md */; };
 		37DF7A9C20AAA0A9007C7712 /* UserEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF7A9B20AAA0A9007C7712 /* UserEndPoint.swift */; };
@@ -119,6 +122,7 @@
 		37548E4E20A989B400D665B4 /* ostkitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ostkitTests.swift; sourceTree = "<group>"; };
 		37548E5020A989B400D665B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37548E5E20A9F55C00D665B4 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		375CE6C720B672790014DBE2 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		37A267DD20ADCA4500F46FE3 /* License.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = License.md; sourceTree = "<group>"; };
 		37A267DE20ADCA4500F46FE3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		37DF7A9B20AAA0A9007C7712 /* UserEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEndPoint.swift; sourceTree = "<group>"; };
@@ -227,6 +231,7 @@
 		37548E3620A989B400D665B4 = {
 			isa = PBXGroup;
 			children = (
+				375CE6C720B672790014DBE2 /* .travis.yml */,
 				3709074220B289F00007F5CB /* Package.swift */,
 				37A267DD20ADCA4500F46FE3 /* License.md */,
 				37A267DE20ADCA4500F46FE3 /* README.md */,
@@ -548,6 +553,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				375CE6C820B672790014DBE2 /* .travis.yml in Resources */,
 				37A267E020ADCA4500F46FE3 /* README.md in Resources */,
 				37A267DF20ADCA4500F46FE3 /* License.md in Resources */,
 			);
@@ -648,6 +654,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				375CE6CA20B696100014DBE2 /* ostkitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -691,6 +698,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				375CE6CB20B696120014DBE2 /* ostkitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -815,7 +823,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = L8BLZZ773P;
-				INFOPLIST_FILE = "ostkit macOSTests/Info.plist";
+				INFOPLIST_FILE = ostkitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -824,6 +832,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.duongkhong.ostkit-macOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 4.0;
 			};
@@ -837,7 +846,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = L8BLZZ773P;
-				INFOPLIST_FILE = "ostkit macOSTests/Info.plist";
+				INFOPLIST_FILE = ostkitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -846,6 +855,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.duongkhong.ostkit-macOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 4.0;
 			};
@@ -985,9 +995,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L8BLZZ773P;
-				INFOPLIST_FILE = "ostkit tvOSTests/Info.plist";
+				INFOPLIST_FILE = ostkitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -995,6 +1006,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.duongkhong.ostkit-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -1006,9 +1018,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L8BLZZ773P;
-				INFOPLIST_FILE = "ostkit tvOSTests/Info.plist";
+				INFOPLIST_FILE = ostkitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1016,6 +1029,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.duongkhong.ostkit-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -1213,7 +1227,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LNB9VFK4YZ;
+				DEVELOPMENT_TEAM = L8BLZZ773P;
 				INFOPLIST_FILE = ostkitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1232,7 +1246,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LNB9VFK4YZ;
+				DEVELOPMENT_TEAM = L8BLZZ773P;
 				INFOPLIST_FILE = ostkitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

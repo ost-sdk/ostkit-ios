@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3726DCEC20B30BC80026F9AF"
-               BuildableName = "ostkit_tvOS.framework"
+               BuildableName = "ostkit.framework"
                BlueprintName = "ostkit tvOS"
                ReferencedContainer = "container:ostkit.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3726DCEC20B30BC80026F9AF"
-            BuildableName = "ostkit_tvOS.framework"
+            BuildableName = "ostkit.framework"
             BlueprintName = "ostkit tvOS"
             ReferencedContainer = "container:ostkit.xcodeproj">
          </BuildableReference>
@@ -65,7 +65,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3726DCEC20B30BC80026F9AF"
-            BuildableName = "ostkit_tvOS.framework"
+            BuildableName = "ostkit.framework"
             BlueprintName = "ostkit tvOS"
             ReferencedContainer = "container:ostkit.xcodeproj">
          </BuildableReference>
@@ -83,7 +83,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3726DCEC20B30BC80026F9AF"
-            BuildableName = "ostkit_tvOS.framework"
+            BuildableName = "ostkit.framework"
             BlueprintName = "ostkit tvOS"
             ReferencedContainer = "container:ostkit.xcodeproj">
          </BuildableReference>
