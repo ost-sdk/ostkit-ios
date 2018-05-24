@@ -4,7 +4,7 @@ before_install:
   - gem install cocoapods --pre --no-rdoc --no-ri --no-document --quiet
 
 install:
-  - carthage update
+  - carthage update --cache-builds
 
 env:
   global:
