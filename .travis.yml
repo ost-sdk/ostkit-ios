@@ -1,5 +1,8 @@
 language: objective-c
 osx_image: xcode9.3
+branches:
+  only:
+    - master
 before_install:
   - gem install cocoapods --pre --no-rdoc --no-ri --no-document --quiet
 
@@ -55,11 +58,11 @@ script:
       xcodebuild -workspace "$WORKSPACE" -scheme "$EXAMPLE_SCHEME" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO build | xcpretty;
     fi
 
-  # Run `pod lib lint` if specified
-  # - if [ $POD_LINT == "YES" ]; then
-  #     pod lib lint;
-  #   fi
+  Run `pod lib lint` if specified
+  - if [ $POD_LINT == "YES" ]; then
+      pod lib lint;
+    fi
 
 cache:
     directories:
-     - $TRAVIS_BUILD_DIR/Carthage/Build/
+    - $TRAVIS_BUILD_DIR/Carthage/Build/
