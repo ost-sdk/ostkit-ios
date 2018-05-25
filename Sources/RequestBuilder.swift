@@ -10,6 +10,16 @@ import Foundation
 import CryptoSwift
 import Alamofire
 
+public protocol RequestTimestamp {
+    var timestamp: TimeInterval { get }
+}
+
+public struct CurrentTimestamp: RequestTimestamp {
+    public var timestamp: TimeInterval {
+        return Date().timeIntervalSince1970
+    }
+}
+
 /// Request builder
 /// User `EndPoint` to builder request
 internal struct RequestBuilder: URLRequestConvertible {
@@ -18,6 +28,7 @@ internal struct RequestBuilder: URLRequestConvertible {
     internal var baseURLString: String
     internal var key: String
     internal var secret: String
+    internal var requestTimestamp: RequestTimestamp
     
     /// Create request builder instance
     ///
@@ -25,11 +36,14 @@ internal struct RequestBuilder: URLRequestConvertible {
     /// - parameter baseURLString: base url string
     /// - parameter key: the api key as provided from OST
     /// - parameter sectect: the api recret as provided from OST
-    internal init(endpoint: EndPoint, baseURLString: String, key: String, secret: String) {
+    internal init(
+        endpoint: EndPoint, baseURLString: String, key: String,
+        secret: String, requestTimestamp: RequestTimestamp = CurrentTimestamp()) {
         self.endpoint = endpoint
         self.baseURLString = baseURLString
         self.key = key
         self.secret = secret
+        self.requestTimestamp = requestTimestamp
     }
     
     /// Create query string which combine from input parameter, path, apikey, requestTimestamp
@@ -94,7 +108,7 @@ internal struct RequestBuilder: URLRequestConvertible {
         ) -> [String: Any] {
         
         var _params = params
-        let timeStamp = Date().timeIntervalSince1970
+        let timeStamp = requestTimestamp.timestamp
         let queryString = generateQueryString(
             path: path, params: params,
             apiKey: key, requestTimestamp: timeStamp,

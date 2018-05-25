@@ -54,13 +54,25 @@
 		3726DD1320B30CC90026F9AF /* UserServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF7AA120AAA23A007C7712 /* UserServices.swift */; };
 		3726DD1420B30CC90026F9AF /* TransactionTypeServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F6D97E20ABEB1800C384D8 /* TransactionTypeServices.swift */; };
 		3726DD1520B30CC90026F9AF /* OSTSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF7A9F20AAA170007C7712 /* OSTSDK.swift */; };
+		373EA84B20B7AD8D00AD35D5 /* RequestBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373EA84A20B7AD8D00AD35D5 /* RequestBuilderTests.swift */; };
+		373EA84C20B7AD8D00AD35D5 /* RequestBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373EA84A20B7AD8D00AD35D5 /* RequestBuilderTests.swift */; };
+		373EA84D20B7AD8D00AD35D5 /* RequestBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373EA84A20B7AD8D00AD35D5 /* RequestBuilderTests.swift */; };
 		375380E120AB59A6005279D8 /* AirDropEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375380E020AB59A6005279D8 /* AirDropEndPoint.swift */; };
 		37548E4A20A989B400D665B4 /* ostkit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37548E4020A989B400D665B4 /* ostkit.framework */; };
-		37548E4F20A989B400D665B4 /* ostkitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37548E4E20A989B400D665B4 /* ostkitTests.swift */; };
 		37548E5120A989B400D665B4 /* ostkit.h in Headers */ = {isa = PBXBuildFile; fileRef = 37548E4320A989B400D665B4 /* ostkit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		37548E5F20A9F55C00D665B4 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37548E5E20A9F55C00D665B4 /* Helpers.swift */; };
+		375CE6C820B672790014DBE2 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 375CE6C720B672790014DBE2 /* .travis.yml */; };
 		37A267DF20ADCA4500F46FE3 /* License.md in Resources */ = {isa = PBXBuildFile; fileRef = 37A267DD20ADCA4500F46FE3 /* License.md */; };
 		37A267E020ADCA4500F46FE3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 37A267DE20ADCA4500F46FE3 /* README.md */; };
+		37CC911C20B7C22A00438E4A /* OSTSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CC911B20B7C22A00438E4A /* OSTSDKTests.swift */; };
+		37CC911D20B7C22A00438E4A /* OSTSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CC911B20B7C22A00438E4A /* OSTSDKTests.swift */; };
+		37CC911E20B7C22A00438E4A /* OSTSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CC911B20B7C22A00438E4A /* OSTSDKTests.swift */; };
+		37CC912020B7C26600438E4A /* BaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CC911F20B7C26600438E4A /* BaseTests.swift */; };
+		37CC912120B7C26600438E4A /* BaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CC911F20B7C26600438E4A /* BaseTests.swift */; };
+		37CC912220B7C26600438E4A /* BaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CC911F20B7C26600438E4A /* BaseTests.swift */; };
+		37CC912420B7C35E00438E4A /* ServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CC912320B7C35E00438E4A /* ServicesTests.swift */; };
+		37CC912520B7C35E00438E4A /* ServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CC912320B7C35E00438E4A /* ServicesTests.swift */; };
+		37CC912620B7C35E00438E4A /* ServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CC912320B7C35E00438E4A /* ServicesTests.swift */; };
 		37DF7A9C20AAA0A9007C7712 /* UserEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF7A9B20AAA0A9007C7712 /* UserEndPoint.swift */; };
 		37DF7AA020AAA170007C7712 /* OSTSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF7A9F20AAA170007C7712 /* OSTSDK.swift */; };
 		37DF7AA220AAA23A007C7712 /* UserServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF7AA120AAA23A007C7712 /* UserServices.swift */; };
@@ -111,16 +123,20 @@
 		3726DCF520B30BC80026F9AF /* ostkit tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ostkit tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3726DD0420B30C290026F9AF /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/tvOS/Alamofire.framework; sourceTree = "<group>"; };
 		3726DD0520B30C290026F9AF /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = Carthage/Build/tvOS/CryptoSwift.framework; sourceTree = "<group>"; };
+		373EA84A20B7AD8D00AD35D5 /* RequestBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilderTests.swift; sourceTree = "<group>"; };
 		375380E020AB59A6005279D8 /* AirDropEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirDropEndPoint.swift; sourceTree = "<group>"; };
 		37548E4020A989B400D665B4 /* ostkit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ostkit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37548E4320A989B400D665B4 /* ostkit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ostkit.h; sourceTree = "<group>"; };
 		37548E4420A989B400D665B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37548E4920A989B400D665B4 /* ostkitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ostkitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		37548E4E20A989B400D665B4 /* ostkitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ostkitTests.swift; sourceTree = "<group>"; };
 		37548E5020A989B400D665B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37548E5E20A9F55C00D665B4 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		375CE6C720B672790014DBE2 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		37A267DD20ADCA4500F46FE3 /* License.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = License.md; sourceTree = "<group>"; };
 		37A267DE20ADCA4500F46FE3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		37CC911B20B7C22A00438E4A /* OSTSDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSTSDKTests.swift; sourceTree = "<group>"; };
+		37CC911F20B7C26600438E4A /* BaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTests.swift; sourceTree = "<group>"; };
+		37CC912320B7C35E00438E4A /* ServicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesTests.swift; sourceTree = "<group>"; };
 		37DF7A9B20AAA0A9007C7712 /* UserEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEndPoint.swift; sourceTree = "<group>"; };
 		37DF7A9F20AAA170007C7712 /* OSTSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSTSDK.swift; sourceTree = "<group>"; };
 		37DF7AA120AAA23A007C7712 /* UserServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServices.swift; sourceTree = "<group>"; };
@@ -227,6 +243,7 @@
 		37548E3620A989B400D665B4 = {
 			isa = PBXGroup;
 			children = (
+				375CE6C720B672790014DBE2 /* .travis.yml */,
 				3709074220B289F00007F5CB /* Package.swift */,
 				37A267DD20ADCA4500F46FE3 /* License.md */,
 				37A267DE20ADCA4500F46FE3 /* README.md */,
@@ -276,7 +293,10 @@
 		37548E4D20A989B400D665B4 /* ostkitTests */ = {
 			isa = PBXGroup;
 			children = (
-				37548E4E20A989B400D665B4 /* ostkitTests.swift */,
+				37CC911F20B7C26600438E4A /* BaseTests.swift */,
+				373EA84A20B7AD8D00AD35D5 /* RequestBuilderTests.swift */,
+				37CC911B20B7C22A00438E4A /* OSTSDKTests.swift */,
+				37CC912320B7C35E00438E4A /* ServicesTests.swift */,
 				37548E5020A989B400D665B4 /* Info.plist */,
 			);
 			path = ostkitTests;
@@ -548,6 +568,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				375CE6C820B672790014DBE2 /* .travis.yml in Resources */,
 				37A267E020ADCA4500F46FE3 /* README.md in Resources */,
 				37A267DF20ADCA4500F46FE3 /* License.md in Resources */,
 			);
@@ -648,6 +669,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				373EA84C20B7AD8D00AD35D5 /* RequestBuilderTests.swift in Sources */,
+				37CC912520B7C35E00438E4A /* ServicesTests.swift in Sources */,
+				37CC911D20B7C22A00438E4A /* OSTSDKTests.swift in Sources */,
+				37CC912120B7C26600438E4A /* BaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -691,6 +716,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				373EA84D20B7AD8D00AD35D5 /* RequestBuilderTests.swift in Sources */,
+				37CC912620B7C35E00438E4A /* ServicesTests.swift in Sources */,
+				37CC911E20B7C22A00438E4A /* OSTSDKTests.swift in Sources */,
+				37CC912220B7C26600438E4A /* BaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -716,7 +745,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37548E4F20A989B400D665B4 /* ostkitTests.swift in Sources */,
+				373EA84B20B7AD8D00AD35D5 /* RequestBuilderTests.swift in Sources */,
+				37CC912420B7C35E00438E4A /* ServicesTests.swift in Sources */,
+				37CC911C20B7C22A00438E4A /* OSTSDKTests.swift in Sources */,
+				37CC912020B7C26600438E4A /* BaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -744,7 +776,8 @@
 		3709075B20B2A9F20007F5CB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -777,7 +810,8 @@
 		3709075C20B2A9F20007F5CB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -811,11 +845,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = L8BLZZ773P;
-				INFOPLIST_FILE = "ostkit macOSTests/Info.plist";
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = ostkitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -824,6 +858,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.duongkhong.ostkit-macOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 4.0;
 			};
@@ -833,11 +868,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = L8BLZZ773P;
-				INFOPLIST_FILE = "ostkit macOSTests/Info.plist";
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = ostkitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -846,6 +881,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.duongkhong.ostkit-macOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 4.0;
 			};
@@ -985,9 +1021,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L8BLZZ773P;
-				INFOPLIST_FILE = "ostkit tvOSTests/Info.plist";
+				INFOPLIST_FILE = ostkitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -995,6 +1032,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.duongkhong.ostkit-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -1006,9 +1044,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L8BLZZ773P;
-				INFOPLIST_FILE = "ostkit tvOSTests/Info.plist";
+				INFOPLIST_FILE = ostkitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1016,6 +1055,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.duongkhong.ostkit-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -1212,8 +1252,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LNB9VFK4YZ;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ostkitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1231,8 +1277,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LNB9VFK4YZ;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ostkitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

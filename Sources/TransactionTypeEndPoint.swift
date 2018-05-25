@@ -28,7 +28,7 @@ enum TransactionTypeEP: EndPoint {
     
     case status(transaction_uuids: [String])
     
-    var method: HTTPMethod {
+    var method: EndPointMethod {
         switch self {
         case .create, .edit, .execute:
             return .post

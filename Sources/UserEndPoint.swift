@@ -22,7 +22,7 @@ internal enum UserEndPoint: EndPoint {
     /// can filter or sort
     case list(pageNo: Int, filter: String?, orderBy: String?, order: String?)
     
-    var method: HTTPMethod {
+    var method: EndPointMethod {
         switch self {
         case .create, .edit:
             return .post
