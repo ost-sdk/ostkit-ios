@@ -12,9 +12,9 @@ import XCTest
 class OSTSDKTests: BaseTests {
     func testSDK() {
         let sdk = OSTSDK(baseURLString: baseURLString, key: key, serect: secret)
-        assert(sdk.baseURLString == baseURLString, "base url string was wrong")
-        assert(sdk.key == key, "key was wrong")
-        assert(sdk.secret == secret, "secret was wrong")
-        assert(sdk.debugMode == false, "debugMode is wrong")
+        XCTAssertEqual(sdk.baseURLString, baseURLString, "base url string was wrong")
+        XCTAssertEqual(sdk.key, key, "key was wrong")
+        XCTAssertEqual(sdk.secret, secret, "secret was wrong")
+        XCTAssertEqual(sdk.debugMode, false, "debugMode is wrong")
     }
 }

@@ -13,10 +13,10 @@ class ServicesTests: BaseTests {
 
     func testServices() {
         let services = Services(key: key, secret: secret, baseURLString: baseURLString)
-        assert(services.baseURLString == baseURLString, "base url string was wrong")
-        assert(services.key == key, "key was wrong")
-        assert(services.secret == secret, "secret was wrong")
-        assert(services.debugMode == false, "debugMode is wrong")
+        XCTAssertEqual(services.baseURLString, baseURLString, "base url string was wrong")
+        XCTAssertEqual(services.key, key, "key was wrong")
+        XCTAssertEqual(services.secret, secret, "secret was wrong")
+        XCTAssertEqual(services.debugMode, false, "debugMode is wrong")
     }
 
 }
