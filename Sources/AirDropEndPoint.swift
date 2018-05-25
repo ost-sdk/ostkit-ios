@@ -16,7 +16,7 @@ internal enum AirdropEndPoint: EndPoint {
     
     case status(uuid: String)
     
-    var method: HTTPMethod {
+    var method: EndPointMethod {
         switch self {
         case .drop:
             return .post

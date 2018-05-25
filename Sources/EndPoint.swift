@@ -11,7 +11,12 @@ import Alamofire
 
 /// Request end point definitions.
 protocol EndPoint {
-    var method: HTTPMethod { get }
+    var method: EndPointMethod { get }
     var path: String { get }
     var params: [String: Any] { get }
+}
+
+enum EndPointMethod: String {
+    case get
+    case post
 }

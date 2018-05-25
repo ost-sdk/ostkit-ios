@@ -10,9 +10,9 @@ import Foundation
 
 /// Service factory
 public class OSTSDK {
-    private var baseURLString: String
-    private var key: String
-    private var secret: String
+    internal var baseURLString: String
+    internal var key: String
+    internal var secret: String
     public var debugMode: Bool = false
     
     /// Create OSTSDK instance
