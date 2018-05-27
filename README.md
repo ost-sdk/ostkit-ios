@@ -2,6 +2,10 @@
 
 [![Platform](https://img.shields.io/badge/Platforms-iOS%20%7C%20macOS%20%7C%20watchOS%20%7C%20tvOS%20%7C%20Linux-4E4E4E.svg?colorA=28a745)](#installation)
 
+[![Build Status](https://travis-ci.org/ost-sdk/ostkit-ios.svg?branch=travis-ci-integration)](https://travis-ci.org/ost-sdk/ostkit-ios)
+
+
+
 OSTKit is an api wrapper written in swift for [ost kit](https://ost.com) . The complete blockchain toolkit for business
 
 ## Requirements
