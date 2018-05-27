@@ -9,6 +9,7 @@
 import XCTest
 @testable import ostkit
 
+
 struct TestTimestamp: RequestTimestamp {
     var timestamp: TimeInterval
     init(timestamp: TimeInterval = Double(1527216538)) {
