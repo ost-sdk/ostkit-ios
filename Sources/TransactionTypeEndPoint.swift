@@ -12,7 +12,7 @@ import Alamofire
 /// Transaction type endpoint definitions.
 enum TransactionTypeEP: EndPoint {
     
-    case execute(from_user_id: String, to_user_id: String, action_id: Double, amount: String, commission_percent: String)
+    case execute(from_user_id: String, to_user_id: String, action_id: String, amount: String, commission_percent: String)
     
     case retrieve(id: String)
     
