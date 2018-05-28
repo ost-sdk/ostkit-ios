@@ -9,12 +9,13 @@
 import Foundation
 import Alamofire
 
-/// hook into alamofire
-/// to handle when ost request's error occur
-public extension DataRequest {
-    
-    func handleErrorOccur<T>(jsonObject: Any, result: Result<Any>) -> Result<T>? {
-        guard let dict = jsonObject as? [String: Any],
+public protocol ErrorCatcher {
+    func handleError(object: Any) -> Error?
+}
+
+public extension ErrorCatcher {
+    func handleError(object: Any) -> Error? {
+        guard let dict = object as? [String: Any],
             let success = dict["success"] as? Bool,
             let err = dict["err"] as? [String: Any],
             success == false
@@ -22,31 +23,41 @@ public extension DataRequest {
                 return nil
         }
         
-        let error = OSTErrorInfo(dict: err)
-        return .failure(ServiceError.ost(error))
+        return OSTError(dict: err)
     }
+}
+
+public struct DefaultErrorCatcher: ErrorCatcher {
+    public init() {}
+}
+
+/// hook into alamofire
+/// to handle when ost request's error occur
+public extension DataRequest {
     
     @discardableResult
-    public func responseCustomJSON(
+    public func responseHookingJSON(
         queue: DispatchQueue? = nil,
+        errorCatcher: ErrorCatcher = DefaultErrorCatcher(),
         completionHandler: @escaping (DataResponse<[String: Any]>) -> Void) -> Self {
+        
+        let jsonSerializer = DataRequest.jsonResponseSerializer(options: .allowFragments)
         
         let responseSerializer = DataResponseSerializer<[String: Any]> {
             request, response, data, error in
             
-            guard error == nil else {
-                return .failure(error!)
+            if let error = error {
+                return .failure(error)
             }
             
-            let jsonResponseSerializer = DataRequest.jsonResponseSerializer(options: .allowFragments)
-            let result = jsonResponseSerializer.serializeResponse(request, response, data, nil)
+            let result = jsonSerializer.serializeResponse(request, response, data, nil)
             
             guard case let .success(jsonObject) = result else {
                 return .failure(ServiceError.parsing)
             }
             
-            if let failed: Result<[String: Any]> = self.handleErrorOccur(jsonObject: jsonObject, result: result) {
-                return failed
+            if let error = errorCatcher.handleError(object: jsonObject) {
+                return .failure(error)
             }
             
             guard let finalJSON = jsonObject as? [String: Any] else {
