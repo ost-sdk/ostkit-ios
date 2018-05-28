@@ -1,21 +1,17 @@
 //
-//  AirDropBuilder.swift
+//  TransferEndPoint.swift
 //  ostkit
 //
-//  Created by Duong Khong on 5/16/18.
+//  Created by Duong Khong on 5/28/18.
 //  Copyright © 2018 Duong Khong. All rights reserved.
 //
 
 import Foundation
-import Alamofire
 
-/// Airdrop endpoint definitions.
-internal enum AirdropEndPoint: EndPoint {
+enum TransferEndPoint: EndPoint {
     
-    case execute(amount: Float, airdropped: Bool, user_ids: String)
-    
+    case create(to_address: String, amount: Double)
     case retrieve(id: String)
-    
     case list(
         page_no: Int, airdropped: Bool, order_by: String?,
         order: String?, limit: Int, optional_filters: String?
@@ -23,7 +19,7 @@ internal enum AirdropEndPoint: EndPoint {
     
     var method: EndPointMethod {
         switch self {
-        case .execute:
+        case .create:
             return .post
             
         case .retrieve, .list:
@@ -33,11 +29,12 @@ internal enum AirdropEndPoint: EndPoint {
     
     var path: String {
         switch self {
-        case .execute, .list:
-            return "/airdrops"
+        case .create, .list:
+            return "/transfers"
             
         case .retrieve(let id):
-            return "/airdrops/\(id)"
+            return "/transfers/\(id)"
+            
         }
     }
     
@@ -45,11 +42,11 @@ internal enum AirdropEndPoint: EndPoint {
         var params: [String: Any] = [:]
         switch self {
             
-        case .execute(let amount, let airdropped, let user_ids):
+        case .create(let to_address, let amount):
+            params["to_address"] = to_address
             params["amount"] = amount
-            params["airdropped"] = airdropped
-            params["user_ids"] = user_ids
-        
+            
+            
         case .list(
             let page_no, let airdropped, let order_by,
             let order, let limit, let optional_filters):
@@ -76,4 +73,5 @@ internal enum AirdropEndPoint: EndPoint {
         
         return params
     }
+    
 }

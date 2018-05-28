@@ -18,5 +18,4 @@ class ServicesTests: BaseTests {
         XCTAssertEqual(services.secret, secret, "secret was wrong")
         XCTAssertEqual(services.debugMode, false, "debugMode is wrong")
     }
-
 }

@@ -13,7 +13,6 @@ public class OSTSDK {
     internal var baseURLString: String
     internal var key: String
     internal var secret: String
-    public var debugMode: Bool = false
     
     /// Create OSTSDK instance
     ///
@@ -21,11 +20,10 @@ public class OSTSDK {
     /// - parameter key: the api key as provided from OST
     /// - parameter sectect: the api recret as provided from OST
     /// - parameter debugMode: print request's infomation if true, no otherwise
-    public init(baseURLString: String, key: String, serect: String, debugMode: Bool = false) {
+    public init(baseURLString: String, key: String, serect: String) {
         self.baseURLString = baseURLString
         self.key = key
         self.secret = serect
-        self.debugMode = debugMode
     }
     
     /// Factory method to create User Services
@@ -33,8 +31,7 @@ public class OSTSDK {
         let services = UserServices(
             key: key,
             secret: secret,
-            baseURLString: baseURLString,
-            debugMode: debugMode
+            baseURLString: baseURLString
         )
         return services
     }
@@ -44,8 +41,16 @@ public class OSTSDK {
         let services = TransactionTypeServices(
             key: key,
             secret: secret,
-            baseURLString: baseURLString,
-            debugMode: debugMode
+            baseURLString: baseURLString
+        )
+        return services
+    }
+    
+    public func airdropServices() -> AirdropServices {
+        let services = AirdropServices(
+            key: key,
+            secret: secret,
+            baseURLString: baseURLString
         )
         return services
     }

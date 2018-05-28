@@ -64,6 +64,13 @@
 		375CE6C820B672790014DBE2 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 375CE6C720B672790014DBE2 /* .travis.yml */; };
 		37A267DF20ADCA4500F46FE3 /* License.md in Resources */ = {isa = PBXBuildFile; fileRef = 37A267DD20ADCA4500F46FE3 /* License.md */; };
 		37A267E020ADCA4500F46FE3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 37A267DE20ADCA4500F46FE3 /* README.md */; };
+		37C6353F20BBB6F600C1C6DA /* AirdropServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C6353E20BBB6F600C1C6DA /* AirdropServices.swift */; };
+		37C6354220BBBC4900C1C6DA /* ActionEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C6354120BBBC4900C1C6DA /* ActionEndPoint.swift */; };
+		37C6354420BBBE4600C1C6DA /* TransferEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C6354320BBBE4600C1C6DA /* TransferEndPoint.swift */; };
+		37C6354620BBBF5B00C1C6DA /* TokenEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C6354520BBBF5B00C1C6DA /* TokenEndPoint.swift */; };
+		37C6354720BBBF5B00C1C6DA /* TokenEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C6354520BBBF5B00C1C6DA /* TokenEndPoint.swift */; };
+		37C6354820BBBF5B00C1C6DA /* TokenEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C6354520BBBF5B00C1C6DA /* TokenEndPoint.swift */; };
+		37C6354920BBBF5B00C1C6DA /* TokenEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C6354520BBBF5B00C1C6DA /* TokenEndPoint.swift */; };
 		37CC911C20B7C22A00438E4A /* OSTSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CC911B20B7C22A00438E4A /* OSTSDKTests.swift */; };
 		37CC911D20B7C22A00438E4A /* OSTSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CC911B20B7C22A00438E4A /* OSTSDKTests.swift */; };
 		37CC911E20B7C22A00438E4A /* OSTSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CC911B20B7C22A00438E4A /* OSTSDKTests.swift */; };
@@ -134,6 +141,10 @@
 		375CE6C720B672790014DBE2 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		37A267DD20ADCA4500F46FE3 /* License.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = License.md; sourceTree = "<group>"; };
 		37A267DE20ADCA4500F46FE3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		37C6353E20BBB6F600C1C6DA /* AirdropServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirdropServices.swift; sourceTree = "<group>"; };
+		37C6354120BBBC4900C1C6DA /* ActionEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionEndPoint.swift; sourceTree = "<group>"; };
+		37C6354320BBBE4600C1C6DA /* TransferEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferEndPoint.swift; sourceTree = "<group>"; };
+		37C6354520BBBF5B00C1C6DA /* TokenEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenEndPoint.swift; sourceTree = "<group>"; };
 		37CC911B20B7C22A00438E4A /* OSTSDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSTSDKTests.swift; sourceTree = "<group>"; };
 		37CC911F20B7C26600438E4A /* BaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTests.swift; sourceTree = "<group>"; };
 		37CC912320B7C35E00438E4A /* ServicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesTests.swift; sourceTree = "<group>"; };
@@ -271,19 +282,13 @@
 		37548E4220A989B400D665B4 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				37C6354020BBBA9F00C1C6DA /* Endpoints */,
+				37C6353D20BBB6D800C1C6DA /* Services */,
 				3709077520B2B0D10007F5CB /* macOS frameworks */,
 				37548E4420A989B400D665B4 /* Info.plist */,
 				37548E4320A989B400D665B4 /* ostkit.h */,
-				37F6D98320ABEF6E00C384D8 /* EndPoint.swift */,
-				37F6D98520ABF15300C384D8 /* RequestBuilder.swift */,
-				37DF7A9B20AAA0A9007C7712 /* UserEndPoint.swift */,
-				375380E020AB59A6005279D8 /* AirDropEndPoint.swift */,
-				37F6D97C20ABE5F700C384D8 /* TransactionTypeEndPoint.swift */,
 				37548E5E20A9F55C00D665B4 /* Helpers.swift */,
 				371C577520AB4E84008D72B9 /* CustomResponse.swift */,
-				37F6D98020ABED4500C384D8 /* Services.swift */,
-				37DF7AA120AAA23A007C7712 /* UserServices.swift */,
-				37F6D97E20ABEB1800C384D8 /* TransactionTypeServices.swift */,
 				37DF7A9F20AAA170007C7712 /* OSTSDK.swift */,
 				371C576F20AB381D008D72B9 /* frameworks */,
 			);
@@ -300,6 +305,32 @@
 				37548E5020A989B400D665B4 /* Info.plist */,
 			);
 			path = ostkitTests;
+			sourceTree = "<group>";
+		};
+		37C6353D20BBB6D800C1C6DA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				37F6D98020ABED4500C384D8 /* Services.swift */,
+				37DF7AA120AAA23A007C7712 /* UserServices.swift */,
+				37F6D97E20ABEB1800C384D8 /* TransactionTypeServices.swift */,
+				37C6353E20BBB6F600C1C6DA /* AirdropServices.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		37C6354020BBBA9F00C1C6DA /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				37F6D98320ABEF6E00C384D8 /* EndPoint.swift */,
+				37F6D98520ABF15300C384D8 /* RequestBuilder.swift */,
+				37DF7A9B20AAA0A9007C7712 /* UserEndPoint.swift */,
+				375380E020AB59A6005279D8 /* AirDropEndPoint.swift */,
+				37F6D97C20ABE5F700C384D8 /* TransactionTypeEndPoint.swift */,
+				37C6354120BBBC4900C1C6DA /* ActionEndPoint.swift */,
+				37C6354320BBBE4600C1C6DA /* TransferEndPoint.swift */,
+				37C6354520BBBF5B00C1C6DA /* TokenEndPoint.swift */,
+			);
+			name = Endpoints;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -659,6 +690,7 @@
 				3709076B20B2AEFF0007F5CB /* TransactionTypeServices.swift in Sources */,
 				3709076420B2AEFF0007F5CB /* UserEndPoint.swift in Sources */,
 				3709076220B2AEFF0007F5CB /* EndPoint.swift in Sources */,
+				37C6354720BBBF5B00C1C6DA /* TokenEndPoint.swift in Sources */,
 				3709076920B2AEFF0007F5CB /* Services.swift in Sources */,
 				3709076520B2AEFF0007F5CB /* AirDropEndPoint.swift in Sources */,
 				3709076320B2AEFF0007F5CB /* RequestBuilder.swift in Sources */,
@@ -688,6 +720,7 @@
 				3726DCE220B30A810026F9AF /* TransactionTypeServices.swift in Sources */,
 				3726DCDB20B30A810026F9AF /* UserEndPoint.swift in Sources */,
 				3726DCD920B30A810026F9AF /* EndPoint.swift in Sources */,
+				37C6354820BBBF5B00C1C6DA /* TokenEndPoint.swift in Sources */,
 				3726DCE020B30A810026F9AF /* Services.swift in Sources */,
 				3726DCDC20B30A810026F9AF /* AirDropEndPoint.swift in Sources */,
 				3726DCDA20B30A810026F9AF /* RequestBuilder.swift in Sources */,
@@ -706,6 +739,7 @@
 				3726DD1420B30CC90026F9AF /* TransactionTypeServices.swift in Sources */,
 				3726DD0D20B30CC90026F9AF /* UserEndPoint.swift in Sources */,
 				3726DD0B20B30CC90026F9AF /* EndPoint.swift in Sources */,
+				37C6354920BBBF5B00C1C6DA /* TokenEndPoint.swift in Sources */,
 				3726DD1220B30CC90026F9AF /* Services.swift in Sources */,
 				3726DD0E20B30CC90026F9AF /* AirDropEndPoint.swift in Sources */,
 				3726DD0C20B30CC90026F9AF /* RequestBuilder.swift in Sources */,
@@ -727,14 +761,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37C6354220BBBC4900C1C6DA /* ActionEndPoint.swift in Sources */,
 				37DF7AA220AAA23A007C7712 /* UserServices.swift in Sources */,
 				37F6D97D20ABE5F700C384D8 /* TransactionTypeEndPoint.swift in Sources */,
 				37F6D98420ABEF6E00C384D8 /* EndPoint.swift in Sources */,
 				371C577620AB4E84008D72B9 /* CustomResponse.swift in Sources */,
 				37DF7A9C20AAA0A9007C7712 /* UserEndPoint.swift in Sources */,
+				37C6353F20BBB6F600C1C6DA /* AirdropServices.swift in Sources */,
+				37C6354420BBBE4600C1C6DA /* TransferEndPoint.swift in Sources */,
 				37F6D97F20ABEB1800C384D8 /* TransactionTypeServices.swift in Sources */,
 				375380E120AB59A6005279D8 /* AirDropEndPoint.swift in Sources */,
 				37F6D98620ABF15300C384D8 /* RequestBuilder.swift in Sources */,
+				37C6354620BBBF5B00C1C6DA /* TokenEndPoint.swift in Sources */,
 				37548E5F20A9F55C00D665B4 /* Helpers.swift in Sources */,
 				37F6D98120ABED4500C384D8 /* Services.swift in Sources */,
 				37DF7AA020AAA170007C7712 /* OSTSDK.swift in Sources */,

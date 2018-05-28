@@ -12,71 +12,66 @@ import Alamofire
 /// Transaction type endpoint definitions.
 enum TransactionTypeEP: EndPoint {
     
-    case create(
-        name: String, currencyType: String, kind: String,
-        currencyValue: Float, commissionPercent: Float
+    case execute(from_user_id: String, to_user_id: String, action_id: String, amount: String, commission_percent: String)
+    
+    case retrieve(id: String)
+    
+    case list(
+        page_no: Int, airdropped: Bool, order_by: String?,
+        order: String?, limit: Int, optional_filters: String?
     )
-    
-    case edit(
-        id: String, name: String, currencyType: String, kind: String,
-        currencyValue: Float, commissionPercent: Float
-    )
-    
-    case list
-    
-    case execute(fromUUID: String, toUUID: String, kind: String)
-    
-    case status(transaction_uuids: [String])
+
     
     var method: EndPointMethod {
         switch self {
-        case .create, .edit, .execute:
+        case .execute:
             return .post
-        case .list, .status:
+            
+        case .retrieve, .list:
             return .get
         }
     }
     
     var path: String {
         switch self {
-        case .create:
-            return "/transaction-types/create"
-        case .edit:
-            return "/transaction-types/edit"
-        case .list:
-            return "/transaction-types/list"
-        case .execute:
-            return "/transaction-types/execute"
-        case .status:
-            return "/transaction-types/status"
+        case .execute, .list:
+            return "/transactions"
+            
+        case .retrieve(let id):
+            return "/transactions/\(id)"
         }
     }
     
     var params: [String: Any] {
         var params: [String: Any] = [:]
         switch self {
-        case .create(let name, let currencyType, let kind, let currencyValue, let commissionPercent):
-            params["name"] = name
-            params["kind"] = kind
-            params["currency_type"] = currencyType
-            params["currency_value"] = currencyValue
-            params["commission_percent"] = commissionPercent
             
-        case .edit(let id, let name, let currencyType, let kind, let currencyValue, let commissionPercent):
-            params["client_transaction_id"] = id
-            params["name"] = name
-            params["kind"] = kind
-            params["currency_type"] = currencyType
-            params["currency_value"] = currencyValue
-            params["commission_percent"] = commissionPercent
+        case .execute(let from_user_id, let to_user_id, let action_id, let amount, let commission_percent):
+            params["from_user_id"] = from_user_id
+            params["to_user_id"] = to_user_id
+            params["action_id"] = action_id
+            params["amount"] = amount
+            params["commission_percent"] = commission_percent
             
-        case .execute(let fromUUID, let toUUID, let kind):
-            params["from_uuid"] = fromUUID
-            params["to_uuid"] = toUUID
-            params["transaction_kind"] = kind
+        case .list(
+            let page_no, let airdropped, let order_by,
+            let order, let limit, let optional_filters):
             
-        case .status(let transaction_uuids):
-            params["transaction_uuids"] = transaction_uuids
+            params["page_no"] = page_no
+            params["airdropped"] = airdropped
+            params["limit"] = limit
+            
+            if let optional_filters = optional_filters {
+                params["optional_filters"] = optional_filters
+            }
+            
+            if let order_by = order_by {
+                params["order_by"] = order_by
+            }
+            
+            if let order = order {
+                params["order"] = order
+            }
             
         default:
             break

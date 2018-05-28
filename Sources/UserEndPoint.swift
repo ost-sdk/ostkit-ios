@@ -18,28 +18,36 @@ internal enum UserEndPoint: EndPoint {
     /// edit user's name determine by uuid
     case edit(uuid: String, name: String)
     
+    /// retrieve
+    case retrieve(uuid: String)
+    
     /// get list user
     /// can filter or sort
-    case list(pageNo: Int, filter: String?, orderBy: String?, order: String?)
+    case list(
+        page_no: Int, airdropped: Bool, order_by: String?,
+        order: String?, limit: Int, optional_filters: String?
+    )
     
     var method: EndPointMethod {
         switch self {
         case .create, .edit:
             return .post
             
-        case .list:
+        case .list, .retrieve:
             return .get
         }
     }
     
     var path: String {
         switch self {
-        case .create:
-            return "/users/create"
-        case .edit:
-            return "/users/edit"
-        case .list:
-            return "/users/list"
+        case .create, .list:
+            return "/users"
+            
+        case .edit(let id, _):
+            return "/users/\(id)"
+            
+        case .retrieve(let id):
+            return "/users/\(id)"
         }
     }
     
@@ -53,19 +61,28 @@ internal enum UserEndPoint: EndPoint {
             params["uuid"] = uuid
             params["name"] = name
             
-        case .list(let pageNo, let filter, let orderBy, let order):
-            params["page_no"] = pageNo
-            if let filter = filter {
-                params["filter"] = filter
+        case .list(
+            let page_no, let airdropped, let order_by,
+            let order, let limit, let optional_filters):
+            
+            params["page_no"] = page_no
+            params["airdropped"] = airdropped
+            params["limit"] = limit
+            
+            if let optional_filters = optional_filters {
+                params["optional_filters"] = optional_filters
             }
             
-            if let orderBy = orderBy {
-                params["order_by"] = orderBy
+            if let order_by = order_by {
+                params["order_by"] = order_by
             }
             
             if let order = order {
                 params["order"] = order
             }
+            
+        default:
+            break
         }
         
         return params

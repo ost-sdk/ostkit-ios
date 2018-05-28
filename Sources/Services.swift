@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 /// OST request error wrapper
-public struct OSTErrorInfo {
+public struct OSTError: Error {
     public var code: String
     public var msg: String
     public var data: [String: Any]
@@ -22,25 +22,75 @@ public struct OSTErrorInfo {
     }
 }
 
-/// Service result definitions.
-public enum ServiceResult<Value> {
-    case success(Value)
-    case failure(Error)
-}
-
 /// Service error definitions.
 public enum ServiceError: Error {
     case parsing
-    case ost(OSTErrorInfo)
+    case ost(OSTError)
+}
+
+public class OSTRequest: CustomStringConvertible, CustomDebugStringConvertible {
+    public var description: String {
+        return request.description
+    }
+    
+    public var debugDescription: String {
+        return request.debugDescription
+    }
+    
+    private var request: DataRequest
+    
+    init(_ request: DataRequest) {
+        self.request = request
+    }
+    
+    public func handlerHookingJSON(
+        queue: DispatchQueue? = nil, errorCatcher: ErrorCatcher = DefaultErrorCatcher(),
+        completionHandler: @escaping (DataResponse<[String : Any]>) -> Void) -> Self {
+        request.responseHookingJSON(queue: queue, errorCatcher: errorCatcher, completionHandler: completionHandler)
+        return self
+    }
+    
+    public func handlerData(
+        queue: DispatchQueue? = nil,
+        completionHandler: @escaping (DataResponse<Data>) -> Void) -> Self {
+        request.responseData(queue: queue, completionHandler: completionHandler)
+        return self
+    }
+    
+    public func handlerString(
+        queue: DispatchQueue? = nil, encoding: String.Encoding = .utf8,
+        completionHandler: @escaping (DataResponse<String>) -> Void) -> Self {
+        request.responseString(queue: queue, encoding: encoding, completionHandler: completionHandler)
+        return self
+    }
+    
+    public func handlerJSON(
+        queue: DispatchQueue? = nil, options: JSONSerialization.ReadingOptions = .allowFragments,
+        completionHandler: @escaping (DataResponse<Any>) -> Void) -> Self {
+        request.responseJSON(queue: queue, options: options, completionHandler: completionHandler)
+        return self
+    }
 }
 
 /// Base services wrapper
 public class Services {
+    
+    /// Orderby definitions.
+    public enum OrderBy: String {
+        case creationTime = "creation_time"
+        case name = "name"
+    }
+    
+    /// Order definitions.
+    public enum Order: String {
+        case desc = "desc"
+        case asc = "asc"
+    }
+    
     internal var key: String
     internal var secret: String
     internal var baseURLString: String
     internal var session = Alamofire.SessionManager.default
-    internal var debugMode: Bool = false
     
     /// Create service instance
     ///
@@ -49,11 +99,10 @@ public class Services {
     /// - parameter key: the api key as provided from OST
     /// - parameter sectect: the api recret as provided from OST
     /// - parameter debugMode: print request's infomation if true, no otherwise
-    init(key: String, secret: String, baseURLString: String, debugMode: Bool = false) {
+    init(key: String, secret: String, baseURLString: String) {
         self.key = key
         self.secret = secret
         self.baseURLString = baseURLString
-        self.debugMode = debugMode
     }
     
     /// Build service's request
@@ -61,14 +110,8 @@ public class Services {
     /// - parameter endPoint: request info
     /// - parameter session: Responsible for creating and managing `Request` objects,
     /// as well as their underlying `NSURLSession`.
-    /// - parameter debugMode: print request's infomation if true, no otherwise
     /// - parameter completionHandler: result handler
-    internal func createRequest(
-        endPoint: EndPoint,
-        session: Alamofire.SessionManager,
-        debugMode: Bool,
-        completionHandler: @escaping (ServiceResult<[String: Any]>) -> Void
-        ) -> Request? {
+    internal func createRequest(endPoint: EndPoint) -> OSTRequest {
         let builder = RequestBuilder(
             endpoint: endPoint,
             baseURLString: baseURLString,
@@ -76,20 +119,6 @@ public class Services {
             secret: secret
         )
         let request = session.request(builder)
-        request.responseCustomJSON {
-            response in
-            if let error = response.error {
-                completionHandler(.failure(error))
-            } else if let json = response.value {
-                completionHandler(.success(json))
-            } else {
-                completionHandler(.failure(ServiceError.parsing))
-            }
-        }
-        
-        if debugMode {
-            debugPrint(request)
-        }
-        return request
+        return OSTRequest(request)
     }
 }
